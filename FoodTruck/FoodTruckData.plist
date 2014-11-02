@@ -6,7 +6,12 @@
 	<dict>
 		<key>Locations</key>
 		<array>
-			<string></string>
+			<dict>
+				<key>Longitude</key>
+				<real>37.332968</real>
+				<key>Latitude</key>
+				<real>-122.029041</real>
+			</dict>
 		</array>
 		<key>Menu</key>
 		<array>
@@ -43,10 +48,8 @@
 				<integer>0</integer>
 			</dict>
 		</array>
-		<key>New item - 3</key>
-		<dict/>
-		<key>New item - 4</key>
-		<dict/>
+		<key>Type</key>
+		<string>Breakfast</string>
 	</dict>
 	<key>Burrito King</key>
 	<dict/>

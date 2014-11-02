@@ -20,10 +20,22 @@
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
+@property (nonatomic, strong) NSDictionary *data;
 
 @end
 
 @implementation MapViewController
+
+- (id)initWithTruckData:(NSDictionary *)data {
+    
+    self = [self init];
+    if (self != nil)
+    {
+        _data = data;
+    }
+    
+    return self;
+}
 
 - (id)init
 {
@@ -63,9 +75,16 @@
 }
 
 - (void)addFoodTruckAnnotations {
-    CLLocationCoordinate2D foodTruckCoords = CLLocationCoordinate2DMake(37.332968, -122.029041);
-    FoodTruckAnnotation *annotation = [[FoodTruckAnnotation alloc] initWithTitle:@"Cracked Egg" Location:foodTruckCoords];
-    [self.mapView addAnnotation:annotation];
+    
+    for (NSString *truckName in self.data.allKeys) {
+        for (NSDictionary *location in self.data[truckName][@"Locations"]) {
+            float longitude = ((NSNumber *)location[@"Longitude"]).floatValue;
+            float latitude = ((NSNumber *)location[@"Latitude"]).floatValue;
+            CLLocationCoordinate2D foodTruckCoords = CLLocationCoordinate2DMake(longitude, latitude);
+            FoodTruckAnnotation *annotation = [[FoodTruckAnnotation alloc] initWithTitle:truckName Location:foodTruckCoords];
+            [self.mapView addAnnotation:annotation];
+        }
+    }
 }
 
 - (void)zoomToCurrentLocation {

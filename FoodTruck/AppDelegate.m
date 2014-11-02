@@ -20,10 +20,12 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     // Override point for customization after application launch.
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"FoodTruckData" ofType:@"plist"];
+    NSDictionary *foodTruckDictionary = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
     
-    MapViewController *test = [[MapViewController alloc] init];
+    MapViewController *mapController = [[MapViewController alloc] initWithTruckData:foodTruckDictionary];
     //UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:test];
-    self.window.rootViewController = test;
+    self.window.rootViewController = mapController;
     
     [self.window makeKeyAndVisible];
     

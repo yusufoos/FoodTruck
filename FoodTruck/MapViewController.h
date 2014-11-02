@@ -11,6 +11,7 @@
 
 @interface MapViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
 
+- (id)initWithTruckData:(NSDictionary *)data;
 
 @end
 
