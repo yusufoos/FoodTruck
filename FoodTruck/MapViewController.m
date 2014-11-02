@@ -25,6 +25,22 @@
 
 @implementation MapViewController
 
+- (id)init
+{
+    self = [super initWithNibName:@"MapViewController" bundle:nil];
+    if (self != nil)
+    {
+        // Further initialization if needed
+    }
+    return self;
+}
+
+- (id)initWithNibName:(NSString *)nibName bundle:(NSBundle *)bundle
+{
+    NSAssert(NO, @"Initialize with -init");
+    return nil;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

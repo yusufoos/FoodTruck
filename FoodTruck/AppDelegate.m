@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MapViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,16 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
     // Override point for customization after application launch.
+    
+    MapViewController *test = [[MapViewController alloc] init];
+    //UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:test];
+    self.window.rootViewController = test;
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

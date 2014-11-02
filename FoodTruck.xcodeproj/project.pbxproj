@@ -13,11 +13,11 @@
 		200A798B1A066D8300F9A5FC /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 200A79891A066D8300F9A5FC /* arrow@2x.png */; };
 		200A798E1A066FFA00F9A5FC /* FoodTruckMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 200A798D1A066FFA00F9A5FC /* FoodTruckMenuController.m */; };
 		200A79901A06997000F9A5FC /* FoodTruckData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 200A798F1A06997000F9A5FC /* FoodTruckData.plist */; };
+		200A79921A069FB000F9A5FC /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 200A79911A069FB000F9A5FC /* MapViewController.xib */; };
 		2049ED081A02790900C904E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2049ED071A02790900C904E3 /* main.m */; };
 		2049ED0B1A02790900C904E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2049ED0A1A02790900C904E3 /* AppDelegate.m */; };
 		2049ED0E1A02790900C904E3 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2049ED0D1A02790900C904E3 /* MapViewController.m */; };
 		2049ED111A02790900C904E3 /* OrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2049ED101A02790900C904E3 /* OrdersViewController.m */; };
-		2049ED141A02790900C904E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2049ED121A02790900C904E3 /* Main.storyboard */; };
 		2049ED161A02790900C904E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2049ED151A02790900C904E3 /* Images.xcassets */; };
 		2049ED191A02790900C904E3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2049ED171A02790900C904E3 /* LaunchScreen.xib */; };
 		2049ED251A02790900C904E3 /* FoodTruckTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2049ED241A02790900C904E3 /* FoodTruckTests.m */; };
@@ -43,6 +43,7 @@
 		200A798C1A066FFA00F9A5FC /* FoodTruckMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodTruckMenuController.h; sourceTree = "<group>"; };
 		200A798D1A066FFA00F9A5FC /* FoodTruckMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodTruckMenuController.m; sourceTree = "<group>"; };
 		200A798F1A06997000F9A5FC /* FoodTruckData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FoodTruckData.plist; sourceTree = "<group>"; };
+		200A79911A069FB000F9A5FC /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		2049ED021A02790900C904E3 /* FoodTruck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTruck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2049ED061A02790900C904E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2049ED071A02790900C904E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -52,7 +53,6 @@
 		2049ED0D1A02790900C904E3 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		2049ED0F1A02790900C904E3 /* OrdersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrdersViewController.h; sourceTree = "<group>"; };
 		2049ED101A02790900C904E3 /* OrdersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrdersViewController.m; sourceTree = "<group>"; };
-		2049ED131A02790900C904E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2049ED151A02790900C904E3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2049ED181A02790900C904E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		2049ED1E1A02790900C904E3 /* FoodTruckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodTruckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,13 +114,13 @@
 			children = (
 				2049ED091A02790900C904E3 /* AppDelegate.h */,
 				2049ED0A1A02790900C904E3 /* AppDelegate.m */,
+				200A79911A069FB000F9A5FC /* MapViewController.xib */,
 				2049ED0C1A02790900C904E3 /* MapViewController.h */,
 				2049ED0D1A02790900C904E3 /* MapViewController.m */,
 				200A79821A0666C900F9A5FC /* FoodTruckAnnotation.h */,
 				200A79831A0666C900F9A5FC /* FoodTruckAnnotation.m */,
 				2049ED0F1A02790900C904E3 /* OrdersViewController.h */,
 				2049ED101A02790900C904E3 /* OrdersViewController.m */,
-				2049ED121A02790900C904E3 /* Main.storyboard */,
 				2049ED151A02790900C904E3 /* Images.xcassets */,
 				2049ED171A02790900C904E3 /* LaunchScreen.xib */,
 				200A79851A066C9600F9A5FC /* Assets */,
@@ -239,10 +239,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				200A79901A06997000F9A5FC /* FoodTruckData.plist in Resources */,
-				2049ED141A02790900C904E3 /* Main.storyboard in Resources */,
 				2049ED191A02790900C904E3 /* LaunchScreen.xib in Resources */,
 				200A798B1A066D8300F9A5FC /* arrow@2x.png in Resources */,
 				2049ED161A02790900C904E3 /* Images.xcassets in Resources */,
+				200A79921A069FB000F9A5FC /* MapViewController.xib in Resources */,
 				200A798A1A066D8300F9A5FC /* arrow.png in Resources */,
 				200A79871A066CA800F9A5FC /* truckPin.png in Resources */,
 			);
@@ -290,14 +290,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2049ED121A02790900C904E3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2049ED131A02790900C904E3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2049ED171A02790900C904E3 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
