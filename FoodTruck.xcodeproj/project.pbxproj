@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		200A79841A0666C900F9A5FC /* FoodTruckAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 200A79831A0666C900F9A5FC /* FoodTruckAnnotation.m */; };
 		200A79871A066CA800F9A5FC /* truckPin.png in Resources */ = {isa = PBXBuildFile; fileRef = 200A79861A066CA800F9A5FC /* truckPin.png */; };
-		200A798A1A066D8300F9A5FC /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 200A79881A066D8300F9A5FC /* arrow.png */; };
-		200A798B1A066D8300F9A5FC /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 200A79891A066D8300F9A5FC /* arrow@2x.png */; };
 		200A798E1A066FFA00F9A5FC /* FoodTruckMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 200A798D1A066FFA00F9A5FC /* FoodTruckMenuController.m */; };
 		200A79901A06997000F9A5FC /* FoodTruckData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 200A798F1A06997000F9A5FC /* FoodTruckData.plist */; };
 		200A79921A069FB000F9A5FC /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 200A79911A069FB000F9A5FC /* MapViewController.xib */; };
@@ -45,8 +43,6 @@
 		200A79821A0666C900F9A5FC /* FoodTruckAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodTruckAnnotation.h; sourceTree = "<group>"; };
 		200A79831A0666C900F9A5FC /* FoodTruckAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodTruckAnnotation.m; sourceTree = "<group>"; };
 		200A79861A066CA800F9A5FC /* truckPin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = truckPin.png; sourceTree = "<group>"; };
-		200A79881A066D8300F9A5FC /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
-		200A79891A066D8300F9A5FC /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
 		200A798C1A066FFA00F9A5FC /* FoodTruckMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodTruckMenuController.h; sourceTree = "<group>"; };
 		200A798D1A066FFA00F9A5FC /* FoodTruckMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodTruckMenuController.m; sourceTree = "<group>"; };
 		200A798F1A06997000F9A5FC /* FoodTruckData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FoodTruckData.plist; sourceTree = "<group>"; };
@@ -102,8 +98,6 @@
 			children = (
 				200A799D1A09323E00F9A5FC /* starEmpty.png */,
 				200A799E1A09323E00F9A5FC /* starFull.png */,
-				200A79881A066D8300F9A5FC /* arrow.png */,
-				200A79891A066D8300F9A5FC /* arrow@2x.png */,
 				200A79861A066CA800F9A5FC /* truckPin.png */,
 			);
 			path = Assets;
@@ -277,12 +271,10 @@
 				200A79961A07FFAA00F9A5FC /* CustomCalloutView.xib in Resources */,
 				200A79901A06997000F9A5FC /* FoodTruckData.plist in Resources */,
 				2049ED191A02790900C904E3 /* LaunchScreen.xib in Resources */,
-				200A798B1A066D8300F9A5FC /* arrow@2x.png in Resources */,
 				200A79A01A09323E00F9A5FC /* starFull.png in Resources */,
 				200A799F1A09323E00F9A5FC /* starEmpty.png in Resources */,
 				2049ED161A02790900C904E3 /* Images.xcassets in Resources */,
 				200A79921A069FB000F9A5FC /* MapViewController.xib in Resources */,
-				200A798A1A066D8300F9A5FC /* arrow.png in Resources */,
 				200A79871A066CA800F9A5FC /* truckPin.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
