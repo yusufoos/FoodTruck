@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomCalloutView">
+            <connections>
+                <outlet property="ratingBar" destination="cMk-4S-Wzs" id="rW2-jj-9Uh"/>
+                <outlet property="titleLabel" destination="CHd-21-sE3" id="X4f-m2-pna"/>
+                <outlet property="typeLabel" destination="sNO-Ze-sgD" id="elM-bP-24N"/>
+                <outlet property="view" destination="iN0-l3-epB" id="ad7-MA-7Nd"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="90"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHd-21-sE3" userLabel="title">
+                    <rect key="frame" x="97" y="0.0" width="47" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cMk-4S-Wzs" userLabel="rating bar" customClass="RatingBarView">
+                    <rect key="frame" x="20" y="47" width="200" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNO-Ze-sgD" userLabel="type">
+                    <rect key="frame" x="103" y="18" width="34" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.75874660326086962" green="0.75874660326086962" blue="0.75874660326086962" alpha="0.5" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="cMk-4S-Wzs" secondAttribute="centerX" id="EJO-zB-Ig0"/>
+                <constraint firstItem="sNO-Ze-sgD" firstAttribute="top" secondItem="CHd-21-sE3" secondAttribute="bottom" constant="1" id="PL0-Lw-qsG"/>
+                <constraint firstAttribute="centerX" secondItem="sNO-Ze-sgD" secondAttribute="centerX" id="YCj-48-QIK"/>
+                <constraint firstAttribute="centerX" secondItem="CHd-21-sE3" secondAttribute="centerX" id="bpO-g1-YU8"/>
+                <constraint firstItem="CHd-21-sE3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="2" id="ff9-NH-Qd9"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="5"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="125" y="0.0"/>
+        </view>
+    </objects>
+</document>

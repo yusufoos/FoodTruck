@@ -7,6 +7,7 @@
 //
 
 #import "FoodTruckAnnotation.h"
+#import "CustomAnnotationView.h"
 
 @implementation FoodTruckAnnotation
 
@@ -23,20 +24,20 @@
 }
 
 - (MKAnnotationView *)annotationView {
-    MKAnnotationView *annotationView = [[MKAnnotationView alloc] initWithAnnotation:self reuseIdentifier:@"FoodTruckAnnotation"];
+    CustomAnnotationView *annotationView = [[CustomAnnotationView alloc] initWithAnnotation:self reuseIdentifier:@"FoodTruckAnnotation"];
     
     annotationView.enabled = YES;
-    annotationView.canShowCallout = YES;
+    //annotationView.canShowCallout = YES;
     annotationView.image = [UIImage imageNamed:@"truckPin.png"];
-    annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    
+    //annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     
     /*
      UIButton *arrowButton = [[UIButton alloc] init];
      [arrowButton setImage:[UIImage imageNamed:@"arrow.png"] forState:UIControlStateNormal];
      
-     annotationView.rightCalloutAccessoryView = arrowButton;
-     */
-    
+     annotationView.rightCalloutAccessoryView = arrowButton;    
+*/
     return annotationView;
 }
 

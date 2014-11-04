@@ -14,6 +14,13 @@
 		200A798E1A066FFA00F9A5FC /* FoodTruckMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 200A798D1A066FFA00F9A5FC /* FoodTruckMenuController.m */; };
 		200A79901A06997000F9A5FC /* FoodTruckData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 200A798F1A06997000F9A5FC /* FoodTruckData.plist */; };
 		200A79921A069FB000F9A5FC /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 200A79911A069FB000F9A5FC /* MapViewController.xib */; };
+		200A79961A07FFAA00F9A5FC /* CustomCalloutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 200A79951A07FFAA00F9A5FC /* CustomCalloutView.xib */; };
+		200A79991A08013100F9A5FC /* CustomCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 200A79981A08013100F9A5FC /* CustomCalloutView.m */; };
+		200A799C1A0904A100F9A5FC /* CustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 200A799B1A0904A100F9A5FC /* CustomAnnotationView.m */; };
+		200A799F1A09323E00F9A5FC /* starEmpty.png in Resources */ = {isa = PBXBuildFile; fileRef = 200A799D1A09323E00F9A5FC /* starEmpty.png */; };
+		200A79A01A09323E00F9A5FC /* starFull.png in Resources */ = {isa = PBXBuildFile; fileRef = 200A799E1A09323E00F9A5FC /* starFull.png */; };
+		200A79A31A0932EE00F9A5FC /* RatingBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 200A79A21A0932EE00F9A5FC /* RatingBarView.m */; };
+		200A79A51A09343D00F9A5FC /* RatingBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 200A79A41A09343D00F9A5FC /* RatingBarView.xib */; };
 		2049ED081A02790900C904E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2049ED071A02790900C904E3 /* main.m */; };
 		2049ED0B1A02790900C904E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2049ED0A1A02790900C904E3 /* AppDelegate.m */; };
 		2049ED0E1A02790900C904E3 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2049ED0D1A02790900C904E3 /* MapViewController.m */; };
@@ -44,6 +51,16 @@
 		200A798D1A066FFA00F9A5FC /* FoodTruckMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodTruckMenuController.m; sourceTree = "<group>"; };
 		200A798F1A06997000F9A5FC /* FoodTruckData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FoodTruckData.plist; sourceTree = "<group>"; };
 		200A79911A069FB000F9A5FC /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		200A79951A07FFAA00F9A5FC /* CustomCalloutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomCalloutView.xib; path = ../CustomCalloutView.xib; sourceTree = "<group>"; };
+		200A79971A08013100F9A5FC /* CustomCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCalloutView.h; sourceTree = "<group>"; };
+		200A79981A08013100F9A5FC /* CustomCalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCalloutView.m; sourceTree = "<group>"; };
+		200A799A1A0904A100F9A5FC /* CustomAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotationView.h; sourceTree = "<group>"; };
+		200A799B1A0904A100F9A5FC /* CustomAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotationView.m; sourceTree = "<group>"; };
+		200A799D1A09323E00F9A5FC /* starEmpty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starEmpty.png; sourceTree = "<group>"; };
+		200A799E1A09323E00F9A5FC /* starFull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starFull.png; sourceTree = "<group>"; };
+		200A79A11A0932EE00F9A5FC /* RatingBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingBarView.h; sourceTree = "<group>"; };
+		200A79A21A0932EE00F9A5FC /* RatingBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingBarView.m; sourceTree = "<group>"; };
+		200A79A41A09343D00F9A5FC /* RatingBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RatingBarView.xib; sourceTree = "<group>"; };
 		2049ED021A02790900C904E3 /* FoodTruck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTruck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2049ED061A02790900C904E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2049ED071A02790900C904E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -83,6 +100,8 @@
 		200A79851A066C9600F9A5FC /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				200A799D1A09323E00F9A5FC /* starEmpty.png */,
+				200A799E1A09323E00F9A5FC /* starFull.png */,
 				200A79881A066D8300F9A5FC /* arrow.png */,
 				200A79891A066D8300F9A5FC /* arrow@2x.png */,
 				200A79861A066CA800F9A5FC /* truckPin.png */,
@@ -112,6 +131,14 @@
 		2049ED041A02790900C904E3 /* FoodTruck */ = {
 			isa = PBXGroup;
 			children = (
+				200A79A11A0932EE00F9A5FC /* RatingBarView.h */,
+				200A79A21A0932EE00F9A5FC /* RatingBarView.m */,
+				200A79971A08013100F9A5FC /* CustomCalloutView.h */,
+				200A79981A08013100F9A5FC /* CustomCalloutView.m */,
+				200A79A41A09343D00F9A5FC /* RatingBarView.xib */,
+				200A799A1A0904A100F9A5FC /* CustomAnnotationView.h */,
+				200A799B1A0904A100F9A5FC /* CustomAnnotationView.m */,
+				200A79951A07FFAA00F9A5FC /* CustomCalloutView.xib */,
 				2049ED091A02790900C904E3 /* AppDelegate.h */,
 				2049ED0A1A02790900C904E3 /* AppDelegate.m */,
 				200A79911A069FB000F9A5FC /* MapViewController.xib */,
@@ -238,9 +265,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				200A79A51A09343D00F9A5FC /* RatingBarView.xib in Resources */,
+				200A79961A07FFAA00F9A5FC /* CustomCalloutView.xib in Resources */,
 				200A79901A06997000F9A5FC /* FoodTruckData.plist in Resources */,
 				2049ED191A02790900C904E3 /* LaunchScreen.xib in Resources */,
 				200A798B1A066D8300F9A5FC /* arrow@2x.png in Resources */,
+				200A79A01A09323E00F9A5FC /* starFull.png in Resources */,
+				200A799F1A09323E00F9A5FC /* starEmpty.png in Resources */,
 				2049ED161A02790900C904E3 /* Images.xcassets in Resources */,
 				200A79921A069FB000F9A5FC /* MapViewController.xib in Resources */,
 				200A798A1A066D8300F9A5FC /* arrow.png in Resources */,
@@ -263,6 +294,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2049ED111A02790900C904E3 /* OrdersViewController.m in Sources */,
+				200A79991A08013100F9A5FC /* CustomCalloutView.m in Sources */,
+				200A799C1A0904A100F9A5FC /* CustomAnnotationView.m in Sources */,
+				200A79A31A0932EE00F9A5FC /* RatingBarView.m in Sources */,
 				2049ED0B1A02790900C904E3 /* AppDelegate.m in Sources */,
 				200A798E1A066FFA00F9A5FC /* FoodTruckMenuController.m in Sources */,
 				200A79841A0666C900F9A5FC /* FoodTruckAnnotation.m in Sources */,
