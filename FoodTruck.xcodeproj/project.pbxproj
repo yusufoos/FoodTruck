@@ -51,7 +51,7 @@
 		200A798D1A066FFA00F9A5FC /* FoodTruckMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodTruckMenuController.m; sourceTree = "<group>"; };
 		200A798F1A06997000F9A5FC /* FoodTruckData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FoodTruckData.plist; sourceTree = "<group>"; };
 		200A79911A069FB000F9A5FC /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
-		200A79951A07FFAA00F9A5FC /* CustomCalloutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomCalloutView.xib; path = ../CustomCalloutView.xib; sourceTree = "<group>"; };
+		200A79951A07FFAA00F9A5FC /* CustomCalloutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCalloutView.xib; sourceTree = "<group>"; };
 		200A79971A08013100F9A5FC /* CustomCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCalloutView.h; sourceTree = "<group>"; };
 		200A79981A08013100F9A5FC /* CustomCalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCalloutView.m; sourceTree = "<group>"; };
 		200A799A1A0904A100F9A5FC /* CustomAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotationView.h; sourceTree = "<group>"; };
@@ -109,6 +109,26 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		200A79A61A0960E500F9A5FC /* HomeMapScreen */ = {
+			isa = PBXGroup;
+			children = (
+				200A79911A069FB000F9A5FC /* MapViewController.xib */,
+				2049ED0C1A02790900C904E3 /* MapViewController.h */,
+				2049ED0D1A02790900C904E3 /* MapViewController.m */,
+				200A79821A0666C900F9A5FC /* FoodTruckAnnotation.h */,
+				200A79831A0666C900F9A5FC /* FoodTruckAnnotation.m */,
+				200A79A11A0932EE00F9A5FC /* RatingBarView.h */,
+				200A79A21A0932EE00F9A5FC /* RatingBarView.m */,
+				200A79971A08013100F9A5FC /* CustomCalloutView.h */,
+				200A79981A08013100F9A5FC /* CustomCalloutView.m */,
+				200A79A41A09343D00F9A5FC /* RatingBarView.xib */,
+				200A799A1A0904A100F9A5FC /* CustomAnnotationView.h */,
+				200A799B1A0904A100F9A5FC /* CustomAnnotationView.m */,
+				200A79951A07FFAA00F9A5FC /* CustomCalloutView.xib */,
+			);
+			path = HomeMapScreen;
+			sourceTree = "<group>";
+		};
 		2049ECF91A02790900C904E3 = {
 			isa = PBXGroup;
 			children = (
@@ -131,21 +151,9 @@
 		2049ED041A02790900C904E3 /* FoodTruck */ = {
 			isa = PBXGroup;
 			children = (
-				200A79A11A0932EE00F9A5FC /* RatingBarView.h */,
-				200A79A21A0932EE00F9A5FC /* RatingBarView.m */,
-				200A79971A08013100F9A5FC /* CustomCalloutView.h */,
-				200A79981A08013100F9A5FC /* CustomCalloutView.m */,
-				200A79A41A09343D00F9A5FC /* RatingBarView.xib */,
-				200A799A1A0904A100F9A5FC /* CustomAnnotationView.h */,
-				200A799B1A0904A100F9A5FC /* CustomAnnotationView.m */,
-				200A79951A07FFAA00F9A5FC /* CustomCalloutView.xib */,
+				200A79A61A0960E500F9A5FC /* HomeMapScreen */,
 				2049ED091A02790900C904E3 /* AppDelegate.h */,
 				2049ED0A1A02790900C904E3 /* AppDelegate.m */,
-				200A79911A069FB000F9A5FC /* MapViewController.xib */,
-				2049ED0C1A02790900C904E3 /* MapViewController.h */,
-				2049ED0D1A02790900C904E3 /* MapViewController.m */,
-				200A79821A0666C900F9A5FC /* FoodTruckAnnotation.h */,
-				200A79831A0666C900F9A5FC /* FoodTruckAnnotation.m */,
 				2049ED0F1A02790900C904E3 /* OrdersViewController.h */,
 				2049ED101A02790900C904E3 /* OrdersViewController.m */,
 				2049ED151A02790900C904E3 /* Images.xcassets */,
