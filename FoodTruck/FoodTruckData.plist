@@ -4,13 +4,21 @@
 <dict>
 	<key>Cracked Egg </key>
 	<dict>
+		<key>Rating</key>
+		<integer>4</integer>
 		<key>Locations</key>
 		<array>
 			<dict>
 				<key>Longitude</key>
-				<real>37.332968</real>
+				<real>40.113639</real>
 				<key>Latitude</key>
-				<real>-122.029041</real>
+				<real>-88.224519</real>
+			</dict>
+			<dict>
+				<key>Longitude</key>
+				<real>40.117315</real>
+				<key>Latitude</key>
+				<real>-88.22413299999999</real>
 			</dict>
 		</array>
 		<key>Menu</key>
