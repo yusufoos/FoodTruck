@@ -10,6 +10,6 @@
 
 @interface FoodTruckMenuController : UITableViewController
 
-@property (strong, nonatomic) NSDictionary *foodTruck;
+@property (strong, nonatomic) NSArray *menu;
 
 @end

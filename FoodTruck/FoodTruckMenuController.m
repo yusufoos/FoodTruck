@@ -11,15 +11,12 @@
 
 @interface FoodTruckMenuController ()
 
-@property (strong, nonatomic) NSArray *menu;
-
 @end
 
 @implementation FoodTruckMenuController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.menu = [self.foodTruck objectForKey:@"menu"];
 }
 
 - (void)didReceiveMemoryWarning {
