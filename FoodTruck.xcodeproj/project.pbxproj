@@ -27,6 +27,12 @@
 		2049ED191A02790900C904E3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2049ED171A02790900C904E3 /* LaunchScreen.xib */; };
 		2049ED251A02790900C904E3 /* FoodTruckTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2049ED241A02790900C904E3 /* FoodTruckTests.m */; };
 		2049ED2F1A027B2C00C904E3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2049ED2E1A027B2C00C904E3 /* MapKit.framework */; };
+		9AC1A1FB1A0C3B970098775C /* CheckoutStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AC1A1F51A0C3B970098775C /* CheckoutStoryboard.storyboard */; };
+		9AC1A1FC1A0C3B970098775C /* PaymentOptionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AC1A1F61A0C3B970098775C /* PaymentOptionsView.xib */; };
+		9AC1A1FD1A0C3B970098775C /* ItemCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AC1A1F71A0C3B970098775C /* ItemCellView.xib */; };
+		9AC1A1FE1A0C3B970098775C /* CreditCardPayment.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AC1A1F81A0C3B970098775C /* CreditCardPayment.xib */; };
+		9AC1A1FF1A0C3B970098775C /* CheckoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AC1A1F91A0C3B970098775C /* CheckoutViewController.xib */; };
+		9AC1A2001A0C3B970098775C /* CCDatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AC1A1FA1A0C3B970098775C /* CCDatePickerView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +78,12 @@
 		2049ED231A02790900C904E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2049ED241A02790900C904E3 /* FoodTruckTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoodTruckTests.m; sourceTree = "<group>"; };
 		2049ED2E1A027B2C00C904E3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		9AC1A1F51A0C3B970098775C /* CheckoutStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CheckoutStoryboard.storyboard; path = FoodTruck/CheckoutStoryboard.storyboard; sourceTree = "<group>"; };
+		9AC1A1F61A0C3B970098775C /* PaymentOptionsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PaymentOptionsView.xib; path = FoodTruck/PaymentOptionsView.xib; sourceTree = "<group>"; };
+		9AC1A1F71A0C3B970098775C /* ItemCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ItemCellView.xib; path = FoodTruck/ItemCellView.xib; sourceTree = "<group>"; };
+		9AC1A1F81A0C3B970098775C /* CreditCardPayment.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CreditCardPayment.xib; path = FoodTruck/CreditCardPayment.xib; sourceTree = "<group>"; };
+		9AC1A1F91A0C3B970098775C /* CheckoutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CheckoutViewController.xib; path = FoodTruck/CheckoutViewController.xib; sourceTree = "<group>"; };
+		9AC1A1FA1A0C3B970098775C /* CCDatePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CCDatePickerView.xib; path = FoodTruck/CCDatePickerView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +157,7 @@
 		2049ED041A02790900C904E3 /* FoodTruck */ = {
 			isa = PBXGroup;
 			children = (
+				9AC1A2011A0C3BA40098775C /* CheckoutScreen */,
 				200A79A61A0960E500F9A5FC /* HomeMapScreen */,
 				2049ED091A02790900C904E3 /* AppDelegate.h */,
 				2049ED0A1A02790900C904E3 /* AppDelegate.m */,
@@ -185,6 +198,20 @@
 				2049ED231A02790900C904E3 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9AC1A2011A0C3BA40098775C /* CheckoutScreen */ = {
+			isa = PBXGroup;
+			children = (
+				9AC1A1F51A0C3B970098775C /* CheckoutStoryboard.storyboard */,
+				9AC1A1F61A0C3B970098775C /* PaymentOptionsView.xib */,
+				9AC1A1F71A0C3B970098775C /* ItemCellView.xib */,
+				9AC1A1F81A0C3B970098775C /* CreditCardPayment.xib */,
+				9AC1A1F91A0C3B970098775C /* CheckoutViewController.xib */,
+				9AC1A1FA1A0C3B970098775C /* CCDatePickerView.xib */,
+			);
+			name = CheckoutScreen;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,12 +295,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				200A79A51A09343D00F9A5FC /* RatingBarView.xib in Resources */,
+				9AC1A1FE1A0C3B970098775C /* CreditCardPayment.xib in Resources */,
+				9AC1A2001A0C3B970098775C /* CCDatePickerView.xib in Resources */,
+				9AC1A1FB1A0C3B970098775C /* CheckoutStoryboard.storyboard in Resources */,
 				200A79961A07FFAA00F9A5FC /* CustomCalloutView.xib in Resources */,
 				200A79901A06997000F9A5FC /* FoodTruckData.plist in Resources */,
 				2049ED191A02790900C904E3 /* LaunchScreen.xib in Resources */,
+				9AC1A1FF1A0C3B970098775C /* CheckoutViewController.xib in Resources */,
 				200A79A01A09323E00F9A5FC /* starFull.png in Resources */,
 				200A799F1A09323E00F9A5FC /* starEmpty.png in Resources */,
+				9AC1A1FD1A0C3B970098775C /* ItemCellView.xib in Resources */,
 				2049ED161A02790900C904E3 /* Images.xcassets in Resources */,
+				9AC1A1FC1A0C3B970098775C /* PaymentOptionsView.xib in Resources */,
 				200A79921A069FB000F9A5FC /* MapViewController.xib in Resources */,
 				200A79871A066CA800F9A5FC /* truckPin.png in Resources */,
 			);
