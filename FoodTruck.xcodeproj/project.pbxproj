@@ -22,6 +22,8 @@
 		2049ED191A02790900C904E3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2049ED171A02790900C904E3 /* LaunchScreen.xib */; };
 		2049ED251A02790900C904E3 /* FoodTruckTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2049ED241A02790900C904E3 /* FoodTruckTests.m */; };
 		2049ED2F1A027B2C00C904E3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2049ED2E1A027B2C00C904E3 /* MapKit.framework */; };
+		7B49CC2E1A0AD93D00DBD9C3 /* ItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B49CC2D1A0AD93D00DBD9C3 /* ItemTableViewCell.m */; };
+		7B49CC301A0AE13900DBD9C3 /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B49CC2F1A0AE13900DBD9C3 /* ItemTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,9 @@
 		2049ED231A02790900C904E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2049ED241A02790900C904E3 /* FoodTruckTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoodTruckTests.m; sourceTree = "<group>"; };
 		2049ED2E1A027B2C00C904E3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7B49CC2C1A0AD93D00DBD9C3 /* ItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemTableViewCell.h; sourceTree = "<group>"; };
+		7B49CC2D1A0AD93D00DBD9C3 /* ItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemTableViewCell.m; sourceTree = "<group>"; };
+		7B49CC2F1A0AE13900DBD9C3 /* ItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +132,9 @@
 				2049ED051A02790900C904E3 /* Supporting Files */,
 				200A798C1A066FFA00F9A5FC /* FoodTruckMenuController.h */,
 				200A798D1A066FFA00F9A5FC /* FoodTruckMenuController.m */,
+				7B49CC2C1A0AD93D00DBD9C3 /* ItemTableViewCell.h */,
+				7B49CC2D1A0AD93D00DBD9C3 /* ItemTableViewCell.m */,
+				7B49CC2F1A0AE13900DBD9C3 /* ItemTableViewCell.xib */,
 				200A798F1A06997000F9A5FC /* FoodTruckData.plist */,
 			);
 			path = FoodTruck;
@@ -238,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B49CC301A0AE13900DBD9C3 /* ItemTableViewCell.xib in Resources */,
 				200A79901A06997000F9A5FC /* FoodTruckData.plist in Resources */,
 				2049ED191A02790900C904E3 /* LaunchScreen.xib in Resources */,
 				200A798B1A066D8300F9A5FC /* arrow@2x.png in Resources */,
@@ -267,6 +276,7 @@
 				200A798E1A066FFA00F9A5FC /* FoodTruckMenuController.m in Sources */,
 				200A79841A0666C900F9A5FC /* FoodTruckAnnotation.m in Sources */,
 				2049ED0E1A02790900C904E3 /* MapViewController.m in Sources */,
+				7B49CC2E1A0AD93D00DBD9C3 /* ItemTableViewCell.m in Sources */,
 				2049ED081A02790900C904E3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
