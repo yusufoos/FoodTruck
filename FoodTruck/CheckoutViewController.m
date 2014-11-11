@@ -7,8 +7,9 @@
 //
 
 #import "CheckoutViewController.h"
+#import "CheckoutItemCellView.h"
 
-@interface CheckoutViewController () <UITableViewDataSource>
+@interface CheckoutViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) NSArray *items;
 
@@ -37,6 +38,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.ItemsTableView.delegate = self;
+    self.ItemsTableView.dataSource = self;
+    [self.ItemsTableView reloadData];
+    
+    float total;
+    for (NSDictionary* item in self.items) {
+        total += ([item[@"Quantity"] integerValue] * [item[@"Price"] integerValue]);
+    
+    }
+    self.totalPrice.text= [NSString stringWithFormat:@"Total: %f",total];
+    
+    
     // Do any additional setup after loading the view.
 }
 
@@ -54,14 +68,15 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    CheckoutViewController *cell = [tableView dequeueReusableCellWithIdentifier:@"itemCell"];
+    CheckoutItemCellView *cell = [tableView dequeueReusableCellWithIdentifier:@"itemCell"];
     
     if (cell == nil) {
         [tableView registerNib:[UINib nibWithNibName:@"CheckoutItemCellView" bundle:nil] forCellReuseIdentifier:@"itemCell"];
         cell = [tableView dequeueReusableCellWithIdentifier:@"itemCell" forIndexPath:indexPath];
     }
-    cell.itemNameLabel.text = [self.menu[indexPath.row] objectForKey:@"Name"];
-    cell.itemQuantityLabel.text = [self.menu[indexPath.row] objectForKey:@"quantity"];
+    cell.itemNameLabel.text = [self.items[indexPath.row] objectForKey:@"Name"];
+    cell.itemQuantityLabel.text = [self.items[indexPath.row] objectForKey:@"Quantity"];
+    return cell;
 }
 
 /*

@@ -11,6 +11,7 @@
 @interface CheckoutViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UITableView *ItemsTableView;
+@property (strong, nonatomic) IBOutlet UILabel *totalPrice;
 
 - (id)initWithItems:(NSArray *)items;
 
