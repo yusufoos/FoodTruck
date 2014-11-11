@@ -174,7 +174,7 @@
 
 -(void)handleSingleTapGesture:(UITapGestureRecognizer *)tapGestureRecognizer {
     NSString *foodTruckTitle = ((CustomCalloutView * )tapGestureRecognizer.view).titleLabel.text;
-    NSArray *menu = self.data[foodTruckTitle][@"Menu"];
+    NSMutableArray *menu = self.data[foodTruckTitle][@"Menu"];
     FoodTruckMenuController *menuController = [[FoodTruckMenuController alloc] initWithMenu:menu];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:menuController];
     [self presentViewController:navController animated:YES completion:nil];

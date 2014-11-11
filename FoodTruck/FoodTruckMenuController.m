@@ -12,16 +12,21 @@
 
 @interface FoodTruckMenuController ()
 
-@property (strong, nonatomic) NSArray *menu;
+@property (strong, nonatomic) NSMutableArray *menu;
 
 @end
 
 @implementation FoodTruckMenuController
 
-- (id)initWithMenu:(NSArray *)menu {
+- (id)initWithMenu:(NSMutableArray *)menu {
     self = [super init];
     if(self) {
-        _menu = menu;
+        _menu = [[NSMutableArray alloc] init];
+        for (NSDictionary *item in menu) {
+            NSMutableDictionary *itemDict = [[NSMutableDictionary alloc] initWithDictionary:item];
+            [itemDict setValue:[NSNumber numberWithInt:0] forKey:@"Quantity"];
+            [_menu addObject:itemDict];
+        }
     }
     return self;
 }
@@ -29,9 +34,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.tableView setAllowsSelection:NO];
-    
-    [self.tableView reloadData];
+    UIBarButtonItem *checkoutButton = [[UIBarButtonItem alloc] initWithTitle:@"Checkout" style:UIBarButtonItemStylePlain target:self action:@selector(checkout:)];
+    self.navigationController.topViewController.navigationItem.rightBarButtonItem = checkoutButton;
+    checkoutButton.enabled = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,20 +46,15 @@
 
 - (NSArray *)orderedItems {
     NSMutableArray *orderedItems = [[NSMutableArray alloc] init];
-    for (NSInteger j = 0; j < [self.tableView numberOfSections]; ++j)
-    {
-        for (NSInteger i = 0; i < [self.tableView numberOfRowsInSection:j]; ++i)
-        {
-            ItemTableViewCell *cell = (ItemTableViewCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:j]];
-            if([[cell.item objectForKey:@"quantity"] integerValue] > 0) {
-                [orderedItems addObject:cell.item];
-            }
+    for (NSMutableDictionary *orderedItem in self.menu) {
+        if([[orderedItem objectForKey:@"Quantity"] integerValue] > 0) {
+            [orderedItems addObject:orderedItem];
         }
     }
     return orderedItems;
 }
 
-- (IBAction)chooseItemsForCheckout:(id)sender {
+- (void)checkout:(id)sender {
     //NSArray *orderedItems = [self orderedItems];
     //Init checkout controller with ordered items array
     //#warning doesnt exist yet add array init method
@@ -82,21 +82,18 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"itemCell"];
-    
     if (cell == nil) {
         [tableView registerNib:[UINib nibWithNibName:@"ItemTableViewCell" bundle:nil] forCellReuseIdentifier:@"itemCell"];
         cell = [tableView dequeueReusableCellWithIdentifier:@"itemCell" forIndexPath:indexPath];
     }
     
+    cell.item = self.menu[indexPath.row];
     
     // Configure the cell...
     cell.itemTitleLabel.text = [self.menu[indexPath.row] objectForKey:@"Name"];
     cell.descriptionLabel.text = [self.menu[indexPath.row] objectForKey:@"Description"];
     cell.priceLabel.text = [NSString stringWithFormat:@"%@", [self.menu[indexPath.row] objectForKey:@"Price"]];
-    cell.quantityLabel.text = @"x0";
-    
-    [cell.item addEntriesFromDictionary:self.menu[indexPath.row]];
-    [cell.item setObject:[NSNumber numberWithInt:0] forKey:@"quantity"];
+    cell.quantityLabel.text = [NSString stringWithFormat:@"x%@", [self.menu[indexPath.row] valueForKey:@"Quantity"]];
     
     return cell;
 }

@@ -21,7 +21,7 @@
     
     // Override point for customization after application launch.
     NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"FoodTruckData" ofType:@"plist"];
-    NSDictionary *foodTruckDictionary = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
+    NSMutableDictionary *foodTruckDictionary = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
     
     MapViewController *mapController = [[MapViewController alloc] initWithTruckData:foodTruckDictionary];
     //UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:test];
