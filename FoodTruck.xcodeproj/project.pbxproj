@@ -28,6 +28,15 @@
 		2049ED2F1A027B2C00C904E3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2049ED2E1A027B2C00C904E3 /* MapKit.framework */; };
 		7B49CC2E1A0AD93D00DBD9C3 /* ItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B49CC2D1A0AD93D00DBD9C3 /* ItemTableViewCell.m */; };
 		7B49CC301A0AE13900DBD9C3 /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B49CC2F1A0AE13900DBD9C3 /* ItemTableViewCell.xib */; };
+		9A61E2AC1A119D8E00264BB0 /* CheckoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A61E2AB1A119D8E00264BB0 /* CheckoutViewController.m */; };
+		9A61E2AF1A119F4F00264BB0 /* CheckoutItemCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A61E2AE1A119F4F00264BB0 /* CheckoutItemCellView.m */; };
+		9A61E2B21A11A0E200264BB0 /* CrediCardPaymentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A61E2B11A11A0E200264BB0 /* CrediCardPaymentView.m */; };
+		9AC1A1FB1A0C3B970098775C /* CheckoutStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AC1A1F51A0C3B970098775C /* CheckoutStoryboard.storyboard */; };
+		9AC1A1FC1A0C3B970098775C /* PaymentOptionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AC1A1F61A0C3B970098775C /* PaymentOptionsView.xib */; };
+		9AC1A1FD1A0C3B970098775C /* CheckoutItemCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AC1A1F71A0C3B970098775C /* CheckoutItemCellView.xib */; };
+		9AC1A1FE1A0C3B970098775C /* CreditCardPayment.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AC1A1F81A0C3B970098775C /* CreditCardPayment.xib */; };
+		9AC1A1FF1A0C3B970098775C /* CheckoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AC1A1F91A0C3B970098775C /* CheckoutViewController.xib */; };
+		9AC1A2001A0C3B970098775C /* CCDatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AC1A1FA1A0C3B970098775C /* CCDatePickerView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +83,18 @@
 		7B49CC2C1A0AD93D00DBD9C3 /* ItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemTableViewCell.h; sourceTree = "<group>"; };
 		7B49CC2D1A0AD93D00DBD9C3 /* ItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemTableViewCell.m; sourceTree = "<group>"; };
 		7B49CC2F1A0AE13900DBD9C3 /* ItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
+		9A61E2AA1A119D8E00264BB0 /* CheckoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CheckoutViewController.h; path = FoodTruck/CheckoutViewController.h; sourceTree = "<group>"; };
+		9A61E2AB1A119D8E00264BB0 /* CheckoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CheckoutViewController.m; path = FoodTruck/CheckoutViewController.m; sourceTree = "<group>"; };
+		9A61E2AD1A119F4F00264BB0 /* CheckoutItemCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckoutItemCellView.h; sourceTree = "<group>"; };
+		9A61E2AE1A119F4F00264BB0 /* CheckoutItemCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckoutItemCellView.m; sourceTree = "<group>"; };
+		9A61E2B01A11A0E200264BB0 /* CrediCardPaymentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrediCardPaymentView.h; path = FoodTruck/CrediCardPaymentView.h; sourceTree = "<group>"; };
+		9A61E2B11A11A0E200264BB0 /* CrediCardPaymentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrediCardPaymentView.m; path = FoodTruck/CrediCardPaymentView.m; sourceTree = "<group>"; };
+		9AC1A1F51A0C3B970098775C /* CheckoutStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CheckoutStoryboard.storyboard; path = FoodTruck/CheckoutStoryboard.storyboard; sourceTree = "<group>"; };
+		9AC1A1F61A0C3B970098775C /* PaymentOptionsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PaymentOptionsView.xib; path = FoodTruck/PaymentOptionsView.xib; sourceTree = "<group>"; };
+		9AC1A1F71A0C3B970098775C /* CheckoutItemCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CheckoutItemCellView.xib; path = FoodTruck/CheckoutItemCellView.xib; sourceTree = "<group>"; };
+		9AC1A1F81A0C3B970098775C /* CreditCardPayment.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CreditCardPayment.xib; path = FoodTruck/CreditCardPayment.xib; sourceTree = "<group>"; };
+		9AC1A1F91A0C3B970098775C /* CheckoutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CheckoutViewController.xib; path = FoodTruck/CheckoutViewController.xib; sourceTree = "<group>"; };
+		9AC1A1FA1A0C3B970098775C /* CCDatePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CCDatePickerView.xib; path = FoodTruck/CCDatePickerView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -450,6 +471,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FoodTruck/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -460,6 +482,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FoodTruck/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

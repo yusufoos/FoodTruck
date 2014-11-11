@@ -8,7 +8,6 @@
 
 #import "FoodTruckMenuController.h"
 #import "ItemTableViewCell.h"
-#import "OrdersViewController.h"
 
 @interface FoodTruckMenuController ()
 
@@ -54,9 +53,9 @@
     NSArray *orderedItems = [self orderedItems];
     //Init checkout controller with ordered items array
     #warning doesnt exist yet add array init method
-    OrdersViewController *checkoutController = [[OrdersViewController alloc] init];
+  //  OrdersViewController *checkoutController = [[OrdersViewController alloc] init];
     // push it
-    [self.navigationController pushViewController:checkoutController animated:YES];
+   // [self.navigationController pushViewController:checkoutController animated:YES];
 }
 
 #pragma mark - Table view data source

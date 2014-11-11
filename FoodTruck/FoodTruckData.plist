@@ -25,19 +25,19 @@
 		<array>
 			<dict>
 				<key>Name</key>
-				<string></string>
+				<string>crack</string>
 				<key>Description</key>
-				<string></string>
+				<string>aa</string>
 				<key>Price</key>
-				<integer>0</integer>
+				<integer>1</integer>
 			</dict>
 			<dict>
 				<key>Name</key>
-				<string></string>
+				<string>asd</string>
 				<key>Description</key>
-				<string></string>
+				<string>asd</string>
 				<key>Price</key>
-				<integer>0</integer>
+				<integer>2</integer>
 			</dict>
 			<dict>
 				<key>Name</key>

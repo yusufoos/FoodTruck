@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MapViewController.h"
-
+#import "CheckoutViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -23,7 +23,7 @@
     NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"FoodTruckData" ofType:@"plist"];
     NSDictionary *foodTruckDictionary = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
     
-    MapViewController *mapController = [[MapViewController alloc] initWithTruckData:foodTruckDictionary];
+    CheckoutViewController *mapController = [[CheckoutViewController alloc] initWithItems:foodTruckDictionary[@"Cracked Egg"][@"Menu"]];
     //UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:test];
     self.window.rootViewController = mapController;
     
