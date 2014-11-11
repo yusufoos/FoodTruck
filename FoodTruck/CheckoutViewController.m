@@ -17,9 +17,19 @@
 @implementation CheckoutViewController
 
 - (id)initWithItems:(NSArray *)items {
-    self = [super init];
+    self = [self init];
     if(self) {
         self.items = items;
+    }
+    return self;
+}
+
+- (id)init
+{
+    self = [super initWithNibName:@"CheckoutViewController" bundle:nil];
+    if (self != nil)
+    {
+        // Further initialization if needed
     }
     return self;
 }
@@ -44,7 +54,14 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return nil;
+    CheckoutViewController *cell = [tableView dequeueReusableCellWithIdentifier:@"itemCell"];
+    
+    if (cell == nil) {
+        [tableView registerNib:[UINib nibWithNibName:@"CheckoutItemCellView" bundle:nil] forCellReuseIdentifier:@"itemCell"];
+        cell = [tableView dequeueReusableCellWithIdentifier:@"itemCell" forIndexPath:indexPath];
+    }
+    cell.itemNameLabel.text = [self.menu[indexPath.row] objectForKey:@"Name"];
+    cell.itemQuantityLabel.text = [self.menu[indexPath.row] objectForKey:@"quantity"];
 }
 
 /*

@@ -4,28 +4,24 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
-        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <viewController id="is3-LW-flT" customClass="CheckoutViewController">
-            <layoutGuides>
-                <viewControllerLayoutGuide type="top" id="gs3-5F-HS4"/>
-                <viewControllerLayoutGuide type="bottom" id="Rzb-DU-Rg9"/>
-            </layoutGuides>
-            <view key="view" contentMode="scaleToFill" id="hDT-Mo-Q77">
-                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                <subviews>
-                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="p1h-zw-BtE">
-                        <rect key="frame" x="0.0" y="28" width="600" height="289"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </tableView>
-                </subviews>
-                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-            </view>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CheckoutViewController">
             <connections>
-                <outlet property="ItemsTableView" destination="p1h-zw-BtE" id="jhH-K0-GXQ"/>
+                <outlet property="ItemsTableView" destination="p1h-zw-BtE" id="tA0-kO-grb"/>
+                <outlet property="view" destination="odM-2v-jIG" id="1YW-lB-9ZP"/>
             </connections>
-            <point key="canvasLocation" x="262" y="331"/>
-        </viewController>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="odM-2v-jIG">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="p1h-zw-BtE">
+                    <rect key="frame" x="8" y="8" width="600" height="289"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="241" y="388"/>
+        </view>
     </objects>
 </document>
