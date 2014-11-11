@@ -150,6 +150,7 @@
 				200A79A61A0960E500F9A5FC /* HomeMapScreen */,
 				2049ED091A02790900C904E3 /* AppDelegate.h */,
 				2049ED0A1A02790900C904E3 /* AppDelegate.m */,
+				2078A1701A1193E80060634D /* OrderHistory */,
 				2049ED151A02790900C904E3 /* Images.xcassets */,
 				2049ED171A02790900C904E3 /* LaunchScreen.xib */,
 				200A79851A066C9600F9A5FC /* Assets */,
@@ -188,6 +189,13 @@
 				2049ED231A02790900C904E3 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2078A1701A1193E80060634D /* OrderHistory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OrderHistory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

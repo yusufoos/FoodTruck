@@ -11,7 +11,7 @@
 @implementation ItemTableViewCell
 
 - (void)awakeFromNib {
-    // Initialization code
+    [self setUserInteractionEnabled:YES];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -20,17 +20,21 @@
 }
 
 - (IBAction)addButton:(id)sender {
-    NSInteger curQuant = [[self.item objectForKey:@"quantity"] integerValue];
-    NSInteger newQuant = curQuant--;
-    [self.item setValue:[NSNumber numberWithInt:(int)newQuant] forKey:@"quantity"];
-    self.quantityLabel.text = [NSString stringWithFormat:@"x%ld", newQuant];
+    NSInteger curQuant = [(NSNumber *)[self.item objectForKey:@"quantity"] integerValue];
+    NSInteger newQuant = curQuant++;
+    NSLog(@"%d->%d", newQuant, curQuant);
+    [self.item setObject:[NSNumber numberWithInt:(int)newQuant] forKey:@"quantity"];
+    [self.quantityLabel setText:[NSString stringWithFormat:@"x%ld", (long)newQuant]];
 }
 
 - (IBAction)deleteButton:(id)sender {
     NSInteger curQuant = [[self.item objectForKey:@"quantity"] integerValue];
+    if(curQuant == 0) {
+        return;
+    }
     NSInteger newQuant = curQuant--;
-    [self.item setValue:[NSNumber numberWithInt:(int)newQuant] forKey:@"quantity"];
-    self.quantityLabel.text = [NSString stringWithFormat:@"x%ld", newQuant];
+    [self.item setObject:[NSNumber numberWithInt:(int)newQuant] forKey:@"quantity"];
+    [self.quantityLabel setText:[NSString stringWithFormat:@"x%ld", (long)newQuant]];
 }
 
 @end

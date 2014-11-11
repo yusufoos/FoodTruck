@@ -8,7 +8,7 @@
 
 #import "FoodTruckMenuController.h"
 #import "ItemTableViewCell.h"
-#import "OrdersViewController.h"
+//#import "OrdersViewController.h"
 
 @interface FoodTruckMenuController ()
 
@@ -21,13 +21,17 @@
 - (id)initWithMenu:(NSArray *)menu {
     self = [super init];
     if(self) {
-        self.menu = menu;
+        _menu = menu;
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.tableView setAllowsSelection:NO];
+    
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,15 +55,20 @@
 }
 
 - (IBAction)chooseItemsForCheckout:(id)sender {
-    NSArray *orderedItems = [self orderedItems];
+    //NSArray *orderedItems = [self orderedItems];
     //Init checkout controller with ordered items array
-    #warning doesnt exist yet add array init method
-    OrdersViewController *checkoutController = [[OrdersViewController alloc] init];
+    //#warning doesnt exist yet add array init method
+    //OrdersViewController *checkoutController = [[OrdersViewController alloc] init];
     // push it
-    [self.navigationController pushViewController:checkoutController animated:YES];
+    //[self.navigationController pushViewController:checkoutController animated:YES];
 }
 
 #pragma mark - Table view data source
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60;
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
@@ -72,12 +81,18 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"itemCell" forIndexPath:indexPath];
+    ItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"itemCell"];
+    
+    if (cell == nil) {
+        [tableView registerNib:[UINib nibWithNibName:@"ItemTableViewCell" bundle:nil] forCellReuseIdentifier:@"itemCell"];
+        cell = [tableView dequeueReusableCellWithIdentifier:@"itemCell" forIndexPath:indexPath];
+    }
+    
     
     // Configure the cell...
-    cell.itemTitleLabel.text = [self.menu[indexPath.row] objectForKey:@"name"];
-    cell.descriptionLabel.text = [self.menu[indexPath.row] objectForKey:@"decription"];
-    cell.priceLabel.text = [NSString stringWithFormat:@"%@", [self.menu[indexPath.row] objectForKey:@"price"]];
+    cell.itemTitleLabel.text = [self.menu[indexPath.row] objectForKey:@"Name"];
+    cell.descriptionLabel.text = [self.menu[indexPath.row] objectForKey:@"Description"];
+    cell.priceLabel.text = [NSString stringWithFormat:@"%@", [self.menu[indexPath.row] objectForKey:@"Price"]];
     cell.quantityLabel.text = @"x0";
     
     [cell.item addEntriesFromDictionary:self.menu[indexPath.row]];

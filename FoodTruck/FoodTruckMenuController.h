@@ -10,4 +10,6 @@
 
 @interface FoodTruckMenuController : UITableViewController
 
+- (id)initWithMenu:(NSArray *)menu;
+
 @end
