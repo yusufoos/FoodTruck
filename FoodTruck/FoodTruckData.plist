@@ -2,7 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Cracked Egg </key>
+	<key>Cracked Egg</key>
 	<dict>
 		<key>Rating</key>
 		<integer>4</integer>
@@ -33,11 +33,11 @@
 			</dict>
 			<dict>
 				<key>Name</key>
-				<string></string>
+				<string>asd</string>
 				<key>Description</key>
-				<string></string>
+				<string>asd</string>
 				<key>Price</key>
-				<integer>0</integer>
+				<integer>2</integer>
 			</dict>
 			<dict>
 				<key>Name</key>
