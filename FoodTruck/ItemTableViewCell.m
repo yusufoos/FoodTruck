@@ -17,7 +17,20 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
-    // Configure the view for the selected state
+}
+
+- (IBAction)addButton:(id)sender {
+    NSInteger curQuant = [[self.item objectForKey:@"quantity"] integerValue];
+    NSInteger newQuant = curQuant--;
+    [self.item setValue:[NSNumber numberWithInt:(int)newQuant] forKey:@"quantity"];
+    self.quantityLabel.text = [NSString stringWithFormat:@"x%ld", newQuant];
+}
+
+- (IBAction)deleteButton:(id)sender {
+    NSInteger curQuant = [[self.item objectForKey:@"quantity"] integerValue];
+    NSInteger newQuant = curQuant--;
+    [self.item setValue:[NSNumber numberWithInt:(int)newQuant] forKey:@"quantity"];
+    self.quantityLabel.text = [NSString stringWithFormat:@"x%ld", newQuant];
 }
 
 @end

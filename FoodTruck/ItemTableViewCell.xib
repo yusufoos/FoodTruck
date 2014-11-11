@@ -41,12 +41,18 @@
                         <state key="normal" title="add">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
+                        <connections>
+                            <action selector="addButton:" destination="PQR-Sf-clf" eventType="touchUpInside" id="odg-Qt-Q4O"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kai-zM-8ZO">
                         <rect key="frame" x="261" y="7" width="43" height="30"/>
                         <state key="normal" title="delete">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
+                        <connections>
+                            <action selector="deleteButton:" destination="PQR-Sf-clf" eventType="touchUpInside" id="fWe-ft-Zbo"/>
+                        </connections>
                     </button>
                 </subviews>
             </tableViewCellContentView>

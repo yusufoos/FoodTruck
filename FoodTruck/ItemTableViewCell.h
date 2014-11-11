@@ -18,4 +18,6 @@
 @property (strong, nonatomic) IBOutlet UIButton *addButton;
 @property (strong, nonatomic) IBOutlet UIButton *deleteButton;
 
+@property (weak, nonatomic) NSMutableDictionary *item;
+
 @end

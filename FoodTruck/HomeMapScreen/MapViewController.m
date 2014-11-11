@@ -165,7 +165,10 @@
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
     
+    FoodTruckAnnotation *annotation =((FoodTruckAnnotation *)view.annotation);
+    NSArray *menu = self.data[annotation.title][@"menu"];
     //[view addSubview:customView];
+    
 
     OrdersViewController *ordersController = [[OrdersViewController alloc] init];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:ordersController];

@@ -8,12 +8,23 @@
 
 #import "FoodTruckMenuController.h"
 #import "ItemTableViewCell.h"
+#import "OrdersViewController.h"
 
 @interface FoodTruckMenuController ()
+
+@property (strong, nonatomic) NSArray *menu;
 
 @end
 
 @implementation FoodTruckMenuController
+
+- (id)initWithMenu:(NSArray *)menu {
+    self = [super init];
+    if(self) {
+        self.menu = menu;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,8 +35,28 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (NSDictionary *)orderedItems {
-    return nil;
+- (NSArray *)orderedItems {
+    NSMutableArray *orderedItems = [[NSMutableArray alloc] init];
+    for (NSInteger j = 0; j < [self.tableView numberOfSections]; ++j)
+    {
+        for (NSInteger i = 0; i < [self.tableView numberOfRowsInSection:j]; ++i)
+        {
+            ItemTableViewCell *cell = (ItemTableViewCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:j]];
+            if([[cell.item objectForKey:@"quantity"] integerValue] > 0) {
+                [orderedItems addObject:cell.item];
+            }
+        }
+    }
+    return orderedItems;
+}
+
+- (IBAction)chooseItemsForCheckout:(id)sender {
+    NSArray *orderedItems = [self orderedItems];
+    //Init checkout controller with ordered items array
+    #warning doesnt exist yet add array init method
+    OrdersViewController *checkoutController = [[OrdersViewController alloc] init];
+    // push it
+    [self.navigationController pushViewController:checkoutController animated:YES];
 }
 
 #pragma mark - Table view data source
@@ -49,18 +80,10 @@
     cell.priceLabel.text = [NSString stringWithFormat:@"%@", [self.menu[indexPath.row] objectForKey:@"price"]];
     cell.quantityLabel.text = @"x0";
     
+    [cell.item addEntriesFromDictionary:self.menu[indexPath.row]];
+    [cell.item setObject:[NSNumber numberWithInt:0] forKey:@"quantity"];
+    
     return cell;
 }
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
