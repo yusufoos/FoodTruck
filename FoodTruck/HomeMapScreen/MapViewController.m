@@ -167,16 +167,15 @@
     
     FoodTruckAnnotation *annotation =((FoodTruckAnnotation *)view.annotation);
     NSArray *menu = self.data[annotation.title][@"menu"];
-    //[view addSubview:customView];
-    
-
-    FoodTruckMenuController *menuController = [[FoodTruckMenuController alloc] init];
+    FoodTruckMenuController *menuController = [[FoodTruckMenuController alloc] initWithMenu:menu];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:menuController];
     [self presentViewController:navController animated:YES completion:nil];
 }
 
 -(void)handleSingleTapGesture:(UITapGestureRecognizer *)tapGestureRecognizer {
-    FoodTruckMenuController *menuController = [[FoodTruckMenuController alloc] init];
+    NSString *foodTruckTitle = ((CustomCalloutView * )tapGestureRecognizer.view).titleLabel.text;
+    NSArray *menu = self.data[foodTruckTitle][@"Menu"];
+    FoodTruckMenuController *menuController = [[FoodTruckMenuController alloc] initWithMenu:menu];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:menuController];
     [self presentViewController:navController animated:YES completion:nil];
 }
