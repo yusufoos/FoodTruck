@@ -8,7 +8,7 @@
 
 #import "MapViewController.h"
 #import "FoodTruckAnnotation.h"
-#import "OrdersViewController.h"
+#import "FoodTruckMenuController.h"
 #import "CustomCalloutView.h"
 #import "CustomAnnotationView.h"
 
@@ -170,14 +170,14 @@
     //[view addSubview:customView];
     
 
-    OrdersViewController *ordersController = [[OrdersViewController alloc] init];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:ordersController];
+    FoodTruckMenuController *menuController = [[FoodTruckMenuController alloc] init];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:menuController];
     [self presentViewController:navController animated:YES completion:nil];
 }
 
 -(void)handleSingleTapGesture:(UITapGestureRecognizer *)tapGestureRecognizer {
-    OrdersViewController *ordersController = [[OrdersViewController alloc] init];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:ordersController];
+    FoodTruckMenuController *menuController = [[FoodTruckMenuController alloc] init];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:menuController];
     [self presentViewController:navController animated:YES completion:nil];
 }
 

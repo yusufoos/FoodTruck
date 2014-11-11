@@ -22,7 +22,6 @@
 		2049ED081A02790900C904E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2049ED071A02790900C904E3 /* main.m */; };
 		2049ED0B1A02790900C904E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2049ED0A1A02790900C904E3 /* AppDelegate.m */; };
 		2049ED0E1A02790900C904E3 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2049ED0D1A02790900C904E3 /* MapViewController.m */; };
-		2049ED111A02790900C904E3 /* OrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2049ED101A02790900C904E3 /* OrdersViewController.m */; };
 		2049ED161A02790900C904E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2049ED151A02790900C904E3 /* Images.xcassets */; };
 		2049ED191A02790900C904E3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2049ED171A02790900C904E3 /* LaunchScreen.xib */; };
 		2049ED251A02790900C904E3 /* FoodTruckTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2049ED241A02790900C904E3 /* FoodTruckTests.m */; };
@@ -66,8 +65,6 @@
 		2049ED0A1A02790900C904E3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2049ED0C1A02790900C904E3 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		2049ED0D1A02790900C904E3 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
-		2049ED0F1A02790900C904E3 /* OrdersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrdersViewController.h; sourceTree = "<group>"; };
-		2049ED101A02790900C904E3 /* OrdersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrdersViewController.m; sourceTree = "<group>"; };
 		2049ED151A02790900C904E3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2049ED181A02790900C904E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		2049ED1E1A02790900C904E3 /* FoodTruckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodTruckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,8 +150,6 @@
 				200A79A61A0960E500F9A5FC /* HomeMapScreen */,
 				2049ED091A02790900C904E3 /* AppDelegate.h */,
 				2049ED0A1A02790900C904E3 /* AppDelegate.m */,
-				2049ED0F1A02790900C904E3 /* OrdersViewController.h */,
-				2049ED101A02790900C904E3 /* OrdersViewController.m */,
 				2049ED151A02790900C904E3 /* Images.xcassets */,
 				2049ED171A02790900C904E3 /* LaunchScreen.xib */,
 				200A79851A066C9600F9A5FC /* Assets */,
@@ -302,7 +297,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2049ED111A02790900C904E3 /* OrdersViewController.m in Sources */,
 				200A79991A08013100F9A5FC /* CustomCalloutView.m in Sources */,
 				200A799C1A0904A100F9A5FC /* CustomAnnotationView.m in Sources */,
 				200A79A31A0932EE00F9A5FC /* RatingBarView.m in Sources */,
