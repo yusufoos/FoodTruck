@@ -23,9 +23,7 @@
     NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"FoodTruckData" ofType:@"plist"];
     NSMutableDictionary *foodTruckDictionary = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
     
-    NSArray *items = foodTruckDictionary[@"Cracked Egg"][@"Menu"];
-    
-    CheckoutViewController *mapController = [[CheckoutViewController alloc] initWithItems:items];
+    MapViewController *mapController = [[MapViewController alloc] initWithTruckData:foodTruckDictionary];
     //UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:test];
     self.window.rootViewController = mapController;
     

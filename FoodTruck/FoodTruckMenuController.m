@@ -8,8 +8,7 @@
 
 #import "FoodTruckMenuController.h"
 #import "ItemTableViewCell.h"
-//#import "OrdersViewController.h"
-
+#import "CheckoutViewController.h"
 @interface FoodTruckMenuController ()
 
 @property (strong, nonatomic) NSMutableArray *menu;
@@ -34,7 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIBarButtonItem *checkoutButton = [[UIBarButtonItem alloc] initWithTitle:@"Checkout" style:UIBarButtonItemStylePlain target:self action:@selector(checkout:)];
+    UIBarButtonItem *checkoutButton = [[UIBarButtonItem alloc] initWithTitle:@"Checkout" style:UIBarButtonItemStylePlain target:self action:@selector(checkout)];
     self.navigationController.topViewController.navigationItem.rightBarButtonItem = checkoutButton;
     checkoutButton.enabled = YES;
 }
@@ -54,13 +53,10 @@
     return orderedItems;
 }
 
-- (void)checkout:(id)sender {
-    //NSArray *orderedItems = [self orderedItems];
-    //Init checkout controller with ordered items array
-    //#warning doesnt exist yet add array init method
-    //OrdersViewController *checkoutController = [[OrdersViewController alloc] init];
-    // push it
-    //[self.navigationController pushViewController:checkoutController animated:YES];
+- (void)checkout {
+    NSArray *orderedItems = [self orderedItems];
+    CheckoutViewController *checkoutController = [[CheckoutViewController alloc] initWithItems:orderedItems];
+    [self.navigationController pushViewController:checkoutController animated:YES];
 }
 
 #pragma mark - Table view data source

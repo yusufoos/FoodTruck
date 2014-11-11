@@ -75,7 +75,8 @@
         cell = [tableView dequeueReusableCellWithIdentifier:@"itemCell" forIndexPath:indexPath];
     }
     cell.itemNameLabel.text = [self.items[indexPath.row] objectForKey:@"Name"];
-    cell.itemQuantityLabel.text = [self.items[indexPath.row] objectForKey:@"Quantity"];
+    cell.itemQuantityLabel.text = [NSString stringWithFormat:@"x%d",
+                                   [[self.items[indexPath.row] objectForKey:@"Quantity"] integerValue]];
     return cell;
 }
 
