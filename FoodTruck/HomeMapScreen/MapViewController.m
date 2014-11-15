@@ -50,6 +50,7 @@
     self = [super initWithNibName:@"MapViewController" bundle:nil];
     if (self != nil)
     {
+        self.title = @"map";
         // Further initialization if needed
     }
     return self;
@@ -163,21 +164,16 @@
     self.calloutView.hidden = YES;
 }
 
-- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
-    
-    FoodTruckAnnotation *annotation =((FoodTruckAnnotation *)view.annotation);
-    NSArray *menu = self.data[annotation.title][@"menu"];
-    FoodTruckMenuController *menuController = [[FoodTruckMenuController alloc] initWithMenu:menu];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:menuController];
-    [self presentViewController:navController animated:YES completion:nil];
-}
-
--(void)handleSingleTapGesture:(UITapGestureRecognizer *)tapGestureRecognizer {
+- (void)handleSingleTapGesture:(UITapGestureRecognizer *)tapGestureRecognizer {
     NSString *foodTruckTitle = ((CustomCalloutView * )tapGestureRecognizer.view).titleLabel.text;
     NSMutableArray *menu = self.data[foodTruckTitle][@"Menu"];
     FoodTruckMenuController *menuController = [[FoodTruckMenuController alloc] initWithMenu:menu];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:menuController];
     [self presentViewController:navController animated:YES completion:nil];
+}
+
+- (void)showOrdersController {
+    [self.tabBarController setSelectedIndex:1];
 }
 
 

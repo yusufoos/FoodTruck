@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "MapViewController.h"
 #import "CheckoutViewController.h"
+#import "OrderHistoryTableViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -23,9 +24,15 @@
     NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"FoodTruckData" ofType:@"plist"];
     NSMutableDictionary *foodTruckDictionary = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
     
+    
+    UITabBarController *tabController = [[UITabBarController alloc] init];
+    
+    OrderHistoryTableViewController *ordersController = [[OrderHistoryTableViewController alloc] init];
     MapViewController *mapController = [[MapViewController alloc] initWithTruckData:foodTruckDictionary];
+    [tabController setViewControllers:@[mapController,ordersController]];
+
     //UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:test];
-    self.window.rootViewController = mapController;
+    self.window.rootViewController = tabController;
     
     [self.window makeKeyAndVisible];
     

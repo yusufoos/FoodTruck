@@ -26,6 +26,10 @@
 		2049ED191A02790900C904E3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2049ED171A02790900C904E3 /* LaunchScreen.xib */; };
 		2049ED251A02790900C904E3 /* FoodTruckTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2049ED241A02790900C904E3 /* FoodTruckTests.m */; };
 		2049ED2F1A027B2C00C904E3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2049ED2E1A027B2C00C904E3 /* MapKit.framework */; };
+		20F0EF0C1A166B910069E493 /* OrderHistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F0EF0B1A166B910069E493 /* OrderHistoryTableViewController.m */; };
+		20F0EF101A166D100069E493 /* OrderItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20F0EF0F1A166D100069E493 /* OrderItemTableViewCell.xib */; };
+		20F0EF131A166D620069E493 /* OrderItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F0EF121A166D620069E493 /* OrderItemTableViewCell.m */; };
+		20F0EF161A1670350069E493 /* OrderPersistanceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F0EF151A1670350069E493 /* OrderPersistanceManager.m */; };
 		7B49CC2E1A0AD93D00DBD9C3 /* ItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B49CC2D1A0AD93D00DBD9C3 /* ItemTableViewCell.m */; };
 		7B49CC301A0AE13900DBD9C3 /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B49CC2F1A0AE13900DBD9C3 /* ItemTableViewCell.xib */; };
 		9A61E2AC1A119D8E00264BB0 /* CheckoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A61E2AB1A119D8E00264BB0 /* CheckoutViewController.m */; };
@@ -80,6 +84,13 @@
 		2049ED231A02790900C904E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2049ED241A02790900C904E3 /* FoodTruckTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoodTruckTests.m; sourceTree = "<group>"; };
 		2049ED2E1A027B2C00C904E3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		20F0EF0A1A166B910069E493 /* OrderHistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderHistoryTableViewController.h; sourceTree = "<group>"; };
+		20F0EF0B1A166B910069E493 /* OrderHistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderHistoryTableViewController.m; sourceTree = "<group>"; };
+		20F0EF0F1A166D100069E493 /* OrderItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderItemTableViewCell.xib; sourceTree = "<group>"; };
+		20F0EF111A166D620069E493 /* OrderItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderItemTableViewCell.h; sourceTree = "<group>"; };
+		20F0EF121A166D620069E493 /* OrderItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderItemTableViewCell.m; sourceTree = "<group>"; };
+		20F0EF141A1670350069E493 /* OrderPersistanceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderPersistanceManager.h; sourceTree = "<group>"; };
+		20F0EF151A1670350069E493 /* OrderPersistanceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderPersistanceManager.m; sourceTree = "<group>"; };
 		7B49CC2C1A0AD93D00DBD9C3 /* ItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemTableViewCell.h; sourceTree = "<group>"; };
 		7B49CC2D1A0AD93D00DBD9C3 /* ItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemTableViewCell.m; sourceTree = "<group>"; };
 		7B49CC2F1A0AE13900DBD9C3 /* ItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
@@ -146,6 +157,18 @@
 			path = HomeMapScreen;
 			sourceTree = "<group>";
 		};
+		203179B71A16623E00CB2C60 /* OrderHistoryScreen */ = {
+			isa = PBXGroup;
+			children = (
+				20F0EF0A1A166B910069E493 /* OrderHistoryTableViewController.h */,
+				20F0EF0B1A166B910069E493 /* OrderHistoryTableViewController.m */,
+				20F0EF111A166D620069E493 /* OrderItemTableViewCell.h */,
+				20F0EF121A166D620069E493 /* OrderItemTableViewCell.m */,
+				20F0EF0F1A166D100069E493 /* OrderItemTableViewCell.xib */,
+			);
+			path = OrderHistoryScreen;
+			sourceTree = "<group>";
+		};
 		2049ECF91A02790900C904E3 = {
 			isa = PBXGroup;
 			children = (
@@ -168,11 +191,11 @@
 		2049ED041A02790900C904E3 /* FoodTruck */ = {
 			isa = PBXGroup;
 			children = (
+				203179B71A16623E00CB2C60 /* OrderHistoryScreen */,
 				9AC1A2011A0C3BA40098775C /* CheckoutScreen */,
 				200A79A61A0960E500F9A5FC /* HomeMapScreen */,
 				2049ED091A02790900C904E3 /* AppDelegate.h */,
 				2049ED0A1A02790900C904E3 /* AppDelegate.m */,
-				2078A1701A1193E80060634D /* OrderHistory */,
 				2049ED151A02790900C904E3 /* Images.xcassets */,
 				2049ED171A02790900C904E3 /* LaunchScreen.xib */,
 				200A79851A066C9600F9A5FC /* Assets */,
@@ -183,6 +206,8 @@
 				7B49CC2D1A0AD93D00DBD9C3 /* ItemTableViewCell.m */,
 				7B49CC2F1A0AE13900DBD9C3 /* ItemTableViewCell.xib */,
 				200A798F1A06997000F9A5FC /* FoodTruckData.plist */,
+				20F0EF141A1670350069E493 /* OrderPersistanceManager.h */,
+				20F0EF151A1670350069E493 /* OrderPersistanceManager.m */,
 			);
 			path = FoodTruck;
 			sourceTree = "<group>";
@@ -324,6 +349,7 @@
 				9AC1A1FF1A0C3B970098775C /* CheckoutViewController.xib in Resources */,
 				200A79A01A09323E00F9A5FC /* starFull.png in Resources */,
 				200A799F1A09323E00F9A5FC /* starEmpty.png in Resources */,
+				20F0EF101A166D100069E493 /* OrderItemTableViewCell.xib in Resources */,
 				9AC1A1FD1A0C3B970098775C /* CheckoutItemCellView.xib in Resources */,
 				2049ED161A02790900C904E3 /* Images.xcassets in Resources */,
 				9AC1A1FC1A0C3B970098775C /* PaymentOptionsView.xib in Resources */,
@@ -347,10 +373,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				200A79991A08013100F9A5FC /* CustomCalloutView.m in Sources */,
+				20F0EF131A166D620069E493 /* OrderItemTableViewCell.m in Sources */,
 				200A799C1A0904A100F9A5FC /* CustomAnnotationView.m in Sources */,
 				9A61E2B21A11A0E200264BB0 /* CrediCardPaymentView.m in Sources */,
+				20F0EF161A1670350069E493 /* OrderPersistanceManager.m in Sources */,
 				200A79A31A0932EE00F9A5FC /* RatingBarView.m in Sources */,
 				2049ED0B1A02790900C904E3 /* AppDelegate.m in Sources */,
+				20F0EF0C1A166B910069E493 /* OrderHistoryTableViewController.m in Sources */,
 				200A798E1A066FFA00F9A5FC /* FoodTruckMenuController.m in Sources */,
 				9A61E2AF1A119F4F00264BB0 /* CheckoutItemCellView.m in Sources */,
 				9A61E2AC1A119D8E00264BB0 /* CheckoutViewController.m in Sources */,

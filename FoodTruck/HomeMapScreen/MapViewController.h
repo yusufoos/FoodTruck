@@ -13,5 +13,7 @@
 
 - (id)initWithTruckData:(NSDictionary *)data;
 
+- (void)showOrdersController;
+
 @end
 

@@ -8,10 +8,15 @@
 
 #import "CheckoutViewController.h"
 #import "CheckoutItemCellView.h"
+#import "OrderPersistanceManager.h"
 
 @interface CheckoutViewController () <UITableViewDataSource, UITableViewDelegate>
 
+- (IBAction)didPayPressWithCash:(id)sender;
+
 @property (strong, nonatomic) NSArray *items;
+
+@property (nonatomic, assign) float total;
 
 @end
 
@@ -20,7 +25,11 @@
 - (id)initWithItems:(NSArray *)items {
     self = [self init];
     if(self) {
-        self.items = items;
+        _items = items;
+        _total = 0;
+        for (NSDictionary* item in _items) {
+            _total += ([item[@"Quantity"] integerValue] * [item[@"Price"] integerValue]);
+        }
     }
     return self;
 }
@@ -42,16 +51,7 @@
     self.ItemsTableView.delegate = self;
     self.ItemsTableView.dataSource = self;
     [self.ItemsTableView reloadData];
-    
-    float total;
-    for (NSDictionary* item in self.items) {
-        total += ([item[@"Quantity"] integerValue] * [item[@"Price"] integerValue]);
-    
-    }
-    self.totalPrice.text= [NSString stringWithFormat:@"Total: %f",total];
-    
-    
-    // Do any additional setup after loading the view.
+    self.totalPrice.text= [NSString stringWithFormat:@"Total: %f",self.total];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -80,14 +80,19 @@
     return cell;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)didPayPressWithCash:(id)sender {
+    
+    NSMutableDictionary *order = [NSMutableDictionary dictionary];
+    order[@"Total"] = @(self.total);
+    order[@"Items"] = self.items;
+    [[OrderPersistanceManager sharedManager] appendOrder:order];
+    [[self presentingViewController] dismissViewControllerAnimated:YES
+                                                        completion:^{
+                                                            [self.presentingViewController
+                                                             performSelector:@selector(showOrdersController)
+                                                             withObject:nil];
+                                                        }];
 }
-*/
+
 
 @end
