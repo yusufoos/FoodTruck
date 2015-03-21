@@ -27,41 +27,113 @@
 				<key>Name</key>
 				<string>Morning Bender</string>
 				<key>Description</key>
-				<string>YUM</string>
+				<string>Warm gooey egg and cheese</string>
 				<key>Price</key>
-				<integer>999</integer>
+				<integer>5</integer>
 			</dict>
 			<dict>
 				<key>Name</key>
-				<string>asd</string>
+				<string>Tater Tots</string>
 				<key>Description</key>
-				<string>asd</string>
+				<string>Potato</string>
 				<key>Price</key>
 				<integer>2</integer>
 			</dict>
 			<dict>
 				<key>Name</key>
-				<string></string>
+				<string>Plan B</string>
 				<key>Description</key>
-				<string></string>
+				<string>No Eggs</string>
 				<key>Price</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Name</key>
-				<string></string>
-				<key>Description</key>
-				<string></string>
-				<key>Price</key>
-				<integer>0</integer>
+				<integer>4</integer>
 			</dict>
 		</array>
 		<key>Type</key>
 		<string>Breakfast</string>
 	</dict>
 	<key>Burrito King</key>
-	<dict/>
+	<dict>
+		<key>Rating</key>
+		<integer>5</integer>
+		<key>Locations</key>
+		<array>
+			<dict>
+				<key>Longitude</key>
+				<real>40.12639</real>
+				<key>Latitude</key>
+				<real>-88.23451900000001</real>
+			</dict>
+		</array>
+		<key>Menu</key>
+		<array>
+			<dict>
+				<key>Name</key>
+				<string>Chicken Burrito</string>
+				<key>Description</key>
+				<string>Wow</string>
+				<key>Price</key>
+				<integer>5</integer>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>Lettuce Wrap</string>
+				<key>Description</key>
+				<string>Ew</string>
+				<key>Price</key>
+				<integer>2</integer>
+			</dict>
+		</array>
+		<key>Type</key>
+		<string>Lunch</string>
+	</dict>
 	<key>Papa Johns</key>
-	<dict/>
+	<dict>
+		<key>Rating</key>
+		<integer>4</integer>
+		<key>Locations</key>
+		<array>
+			<dict>
+				<key>Longitude</key>
+				<real>40.110639</real>
+				<key>Latitude</key>
+				<real>-88.224119</real>
+			</dict>
+			<dict>
+				<key>Longitude</key>
+				<real>40.116315</real>
+				<key>Latitude</key>
+				<real>-88.220133</real>
+			</dict>
+		</array>
+		<key>Menu</key>
+		<array>
+			<dict>
+				<key>Name</key>
+				<string>Cheese Pizza</string>
+				<key>Description</key>
+				<string>:)</string>
+				<key>Price</key>
+				<integer>10</integer>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>Veggie Pizza</string>
+				<key>Description</key>
+				<string>:(</string>
+				<key>Price</key>
+				<integer>13</integer>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>Cookie Pizza</string>
+				<key>Description</key>
+				<string>Sugar rush!</string>
+				<key>Price</key>
+				<integer>25</integer>
+			</dict>
+		</array>
+		<key>Type</key>
+		<string>Dinner</string>
+	</dict>
 </dict>
 </plist>
