@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController">
@@ -18,16 +18,10 @@
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5yh-3X-G6y">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 </mapView>
-                <searchBar userInteractionEnabled="NO" contentMode="redraw" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8xc-19-WQP">
-                    <rect key="frame" x="140" y="8" width="320" height="44"/>
-                    <textInputTraits key="textInputTraits"/>
-                </searchBar>
             </subviews>
             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="8xc-19-WQP" firstAttribute="top" secondItem="OTo-hZ-6SZ" secondAttribute="top" constant="20" id="JXa-LC-IrZ"/>
                 <constraint firstAttribute="bottom" secondItem="5yh-3X-G6y" secondAttribute="bottom" id="KCf-on-ozE"/>
-                <constraint firstAttribute="centerX" secondItem="8xc-19-WQP" secondAttribute="centerX" id="Pcn-16-VJL"/>
                 <constraint firstItem="5yh-3X-G6y" firstAttribute="top" secondItem="OTo-hZ-6SZ" secondAttribute="top" id="hJn-6W-vrY"/>
                 <constraint firstAttribute="trailing" secondItem="5yh-3X-G6y" secondAttribute="trailing" id="hu2-k8-gIZ"/>
                 <constraint firstItem="5yh-3X-G6y" firstAttribute="leading" secondItem="OTo-hZ-6SZ" secondAttribute="leading" id="nzB-YI-Tjg"/>

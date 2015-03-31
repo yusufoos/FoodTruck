@@ -10,6 +10,9 @@
 #import "MapViewController.h"
 #import "CheckoutViewController.h"
 #import "OrderHistoryTableViewController.h"
+#import "AFNetworking.h"
+#import "InputsFormViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -27,16 +30,38 @@
     
     UITabBarController *tabController = [[UITabBarController alloc] init];
     
+    
     OrderHistoryTableViewController *ordersController = [[OrderHistoryTableViewController alloc] init];
     MapViewController *mapController = [[MapViewController alloc] initWithTruckData:foodTruckDictionary];
     [tabController setViewControllers:@[mapController,ordersController]];
 
-    //UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:test];
-    self.window.rootViewController = tabController;
+    
+    InputsFormViewController *signupLogin = [[InputsFormViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:signupLogin];
+    
+    
+    
+    
+    self.window.rootViewController = nav;
     
     [self.window makeKeyAndVisible];
     
     return YES;
+}
+
+-(NSMutableDictionary *)downloadFoodTruckData
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    __block id response = nil;
+    [manager GET:@"http://example.com/resources.json" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+        response = responseObject;
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+    
+    return response;    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
