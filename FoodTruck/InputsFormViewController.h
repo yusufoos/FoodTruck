@@ -25,6 +25,11 @@
 
 #import "XLFormViewController.h"
 
+@class MapViewController;
+
 @interface InputsFormViewController : XLFormViewController
+
+@property (nonatomic, strong) UIViewController *merchantController;
+@property (nonatomic, strong) UIViewController *userController;
 
 @end

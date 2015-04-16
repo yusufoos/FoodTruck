@@ -11,13 +11,14 @@
 
 @implementation FoodTruckAnnotation
 
-- (id)initWithTitle:(NSString *)newTitle Location:(CLLocationCoordinate2D)location {
+- (id)initWithTitle:(NSString *)newTitle Location:(CLLocationCoordinate2D)location ID:(NSNumber *)truckID {
     
     self = [super init];
     
     if (self) {
         _title = newTitle;
         _coordinate = location;
+        _foodtruckId = truckID;
     }
     
     return self;

@@ -20,19 +20,19 @@
 }
 
 - (IBAction)addButton:(id)sender {
-    NSInteger curQuant = [(NSNumber *)[self.item objectForKey:@"Quantity"] integerValue];
+    NSInteger curQuant = [(NSNumber *)[self.item objectForKey:@"quantity"] integerValue];
     NSInteger newQuant = curQuant+1;
-    [self.item setObject:[NSNumber numberWithInt:(int)newQuant] forKey:@"Quantity"];
+    [self.item setObject:[NSNumber numberWithInt:(int)newQuant] forKey:@"quantity"];
     [self.quantityLabel setText:[NSString stringWithFormat:@"x%ld", (long)newQuant]];
 }
 
 - (IBAction)deleteButton:(id)sender {
-    NSInteger curQuant = [[self.item objectForKey:@"Quantity"] integerValue];
+    NSInteger curQuant = [[self.item objectForKey:@"quantity"] integerValue];
     if(curQuant == 0) {
         return;
     }
     NSInteger newQuant = curQuant-1;
-    [self.item setObject:[NSNumber numberWithInt:(int)newQuant] forKey:@"Quantity"];
+    [self.item setObject:[NSNumber numberWithInt:(int)newQuant] forKey:@"quantity"];
     [self.quantityLabel setText:[NSString stringWithFormat:@"x%ld", (long)newQuant]];
 }
 

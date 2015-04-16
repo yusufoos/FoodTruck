@@ -12,6 +12,7 @@
 #import "OrderHistoryTableViewController.h"
 #import "AFNetworking.h"
 #import "InputsFormViewController.h"
+#import "MerchantViewController.h"
 
 @interface AppDelegate ()
 
@@ -22,46 +23,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
-    // Override point for customization after application launch.
-    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"FoodTruckData" ofType:@"plist"];
-    NSMutableDictionary *foodTruckDictionary = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
-    
-    
-    UITabBarController *tabController = [[UITabBarController alloc] init];
-    
-    
+ 
     OrderHistoryTableViewController *ordersController = [[OrderHistoryTableViewController alloc] init];
-    MapViewController *mapController = [[MapViewController alloc] initWithTruckData:foodTruckDictionary];
+    MapViewController *mapController = [[MapViewController alloc] init];
+    UITabBarController *tabController = [[UITabBarController alloc] init];
     [tabController setViewControllers:@[mapController,ordersController]];
-
+    
+    MerchantViewController *merchantController = [[MerchantViewController alloc] init];
     
     InputsFormViewController *signupLogin = [[InputsFormViewController alloc] init];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:signupLogin];
+    signupLogin.userController = tabController;
+    signupLogin.merchantController = merchantController;
     
-    
-    
-    
-    self.window.rootViewController = nav;
+    self.window.rootViewController = signupLogin;
     
     [self.window makeKeyAndVisible];
     
     return YES;
-}
-
--(NSMutableDictionary *)downloadFoodTruckData
-{
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    
-    __block id response = nil;
-    [manager GET:@"http://example.com/resources.json" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"JSON: %@", responseObject);
-        response = responseObject;
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
-    }];
-    
-    return response;    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

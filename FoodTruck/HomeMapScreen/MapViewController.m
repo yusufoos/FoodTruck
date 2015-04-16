@@ -10,7 +10,11 @@
 #import "FoodTruckAnnotation.h"
 #import "FoodTruckMenuController.h"
 #import "CustomCalloutView.h"
+#import "InputsFormViewController.h"
 #import "CustomAnnotationView.h"
+#import "AFNetworking.h"
+#import "AppCache.h"
+
 
 @interface MapViewController ()
 
@@ -26,9 +30,11 @@
 
 @property (nonatomic, strong) CustomCalloutView *calloutView;
 
-@property (nonatomic, strong) NSDictionary *data;
+@property (nonatomic, strong) NSArray *data;
 
 @property (nonatomic, assign) BOOL initialPositionSet;
+
+
 
 @end
 
@@ -39,7 +45,7 @@
     self = [self init];
     if (self != nil)
     {
-        _data = data;
+        //_data = data;
     }
     
     return self;
@@ -51,6 +57,7 @@
     if (self != nil)
     {
         self.title = @"map";
+        
         // Further initialization if needed
     }
     return self;
@@ -62,8 +69,32 @@
     return nil;
 }
 
+-(void)downloadFoodTruckData
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    __block id response = nil;
+    [manager GET:@"https://afternoon-inlet-3482.herokuapp.com/food_trucks.json" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+        self.data = responseObject;
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+    
+}
+
+-(void)setData:(NSArray *)data
+{
+    _data = data;
+    
+    if(_data) {
+        [self addFoodTruckAnnotations];
+    }
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
@@ -81,11 +112,11 @@
     _mapView.delegate = self;
     _mapView.mapType = MKMapTypeStandard;
     
-    [self addFoodTruckAnnotations];
-
+    [self downloadFoodTruckData];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
+    
 }
 
 
@@ -102,16 +133,16 @@
 
 - (void)addFoodTruckAnnotations {
     
-    for (NSString *truckName in self.data.allKeys) {
-        for (NSDictionary *location in self.data[truckName][@"Locations"]) {
-            float longitude = ((NSNumber *)location[@"Longitude"]).floatValue;
-            float latitude = ((NSNumber *)location[@"Latitude"]).floatValue;
+    for (NSDictionary *foodTruck in self.data) {
+            float longitude = ((NSNumber *)foodTruck[@"longitude"]).floatValue;
+            float latitude = ((NSNumber *)foodTruck[@"latitude"]).floatValue;
+            NSString *name = foodTruck[@"name"];
+            NSNumber *truckID =foodTruck[@"id"];
             CLLocationCoordinate2D foodTruckCoords = CLLocationCoordinate2DMake(longitude, latitude);
-            FoodTruckAnnotation *annotation = [[FoodTruckAnnotation alloc] initWithTitle:truckName Location:foodTruckCoords];
-            annotation.type = self.data[truckName][@"Type"];
-            annotation.rating = self.data[truckName][@"Rating"];
+            FoodTruckAnnotation *annotation = [[FoodTruckAnnotation alloc] initWithTitle:name Location:foodTruckCoords ID:truckID];
+            annotation.type = @"";
+            annotation.rating = @3;
             [self.mapView addAnnotation:annotation];
-        }
     }
 }
 
@@ -126,7 +157,7 @@
 // Location Manager Delegate Methods
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
-    NSLog(@"%@", [locations lastObject]);
+   // NSLog(@"%@", [locations lastObject]);
 }
 
 #pragma mark - Map View Delegate
@@ -157,6 +188,7 @@
     self.calloutView.titleLabel.text = annotation.title;
     self.calloutView.ratingBar.rating = annotation.rating;
     self.calloutView.typeLabel.text = annotation.type;
+    self.calloutView.foodtruckId = annotation.foodtruckId;
     self.calloutView.hidden = NO;
 }
 
@@ -165,17 +197,37 @@
 }
 
 - (void)handleSingleTapGesture:(UITapGestureRecognizer *)tapGestureRecognizer {
-    NSString *foodTruckTitle = ((CustomCalloutView * )tapGestureRecognizer.view).titleLabel.text;
-    NSMutableArray *menu = self.data[foodTruckTitle][@"Menu"];
-    FoodTruckMenuController *menuController = [[FoodTruckMenuController alloc] initWithMenu:menu];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:menuController];
-    [self presentViewController:navController animated:YES completion:nil];
+    
+    NSNumber *foodTruckId = ((CustomCalloutView * )tapGestureRecognizer.view).foodtruckId;
+    [AppCache sharedCache].foodTruckDict = [self foodTruckForID:foodTruckId];
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    NSString *url = [NSString stringWithFormat:@"https://afternoon-inlet-3482.herokuapp.com/food_trucks/%@/menu_items.json",foodTruckId];
+
+    [manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+        NSMutableArray *menu = responseObject;
+        FoodTruckMenuController *menuController = [[FoodTruckMenuController alloc] initWithMenu:menu];
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:menuController];
+        [self presentViewController:navController animated:YES completion:nil];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
 }
 
 - (void)showOrdersController {
     [self.tabBarController setSelectedIndex:1];
 }
 
+-(NSDictionary *)foodTruckForID:(NSNumber *)truckID
+{
+    for (NSDictionary * dict in self.data) {
+        if([dict[@"id"] isEqual:truckID]) {
+            return dict;
+        }
+    }
+    
+    return nil;
+}
 
 
 @end

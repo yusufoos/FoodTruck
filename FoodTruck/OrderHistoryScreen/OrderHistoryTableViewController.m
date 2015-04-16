@@ -49,6 +49,7 @@
 }
 
 - (void)reloadData {
+    self.orders = [[OrderPersistanceManager sharedManager] loadOrders];
     [self.tableView reloadData];
 }
 
@@ -76,10 +77,14 @@
         cell = [tableView dequeueReusableCellWithIdentifier:@"orderItemCell" forIndexPath:indexPath];
     }
     
+    NSNumber *quantity = [self.orders[indexPath.row][@"items"][0] objectForKey:@"quantity"];
+    NSNumber *price = [self.orders[indexPath.row][@"items"][0] objectForKey:@"price"];
+
     // Configure the cell...
-    cell.titleLabel.text = [self.orders[indexPath.row][@"Items"][0] objectForKey:@"Name"];
-    cell.priceLabel.text = [NSString stringWithFormat:@"%@", [self.orders[indexPath.row][@"Items"][0] objectForKey:@"Price"]];
-    cell.quantityLabel.text = [NSString stringWithFormat:@"x%@", [self.orders[indexPath.row][@"Items"][0] valueForKey:@"Quantity"]];
+    cell.titleLabel.text = [self.orders[indexPath.row][@"items"][0] objectForKey:@"name"];
+    cell.priceLabel.text = [NSString stringWithFormat:@"%@", @(quantity.integerValue * price.integerValue)];
+    cell.quantityLabel.text = [NSString stringWithFormat:@"x%@", [self.orders[indexPath.row][@"items"][0] valueForKey:@"quantity"]];
+    
     
     return cell;
 }

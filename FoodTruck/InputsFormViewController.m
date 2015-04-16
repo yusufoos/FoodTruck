@@ -26,21 +26,20 @@
 #import "XLForm.h"
 #import "InputsFormViewController.h"
 #import "AFNetworking.h"
+#import "MapViewController.h"
+#import "NSMutableDictionary+KAKeyRenaming.h"
+#import "AppCache.h"
 
-NSString *const kName = @"name";
-NSString *const kEmail = @"email";
-NSString *const kTwitter = @"twitter";
-NSString *const kNumber = @"number";
-NSString *const kInteger = @"integer";
-NSString *const kDecimal = @"decimal";
-NSString *const kPassword = @"password";
+static NSString *const kName = @"name";
+static NSString *const kEmail = @"email";
+static NSString *const kTwitter = @"twitter";
+static NSString *const kNumber = @"number";
+static NSString *const kInteger = @"integer";
+static NSString *const kDecimal = @"decimal";
+static NSString *const kPassword = @"password";
 
-NSString *const kIsMerchant = @"isMerchant";
+static NSString *const kIsMerchant = @"isMerchant";
 
-NSString *const kPhone = @"phone";
-NSString *const kUrl = @"url";
-NSString *const kTextView = @"textView";
-NSString *const kNotes = @"notes";
 
 
 @implementation InputsFormViewController
@@ -54,8 +53,8 @@ NSString *const kNotes = @"notes";
     formDescriptor.assignFirstResponderOnShow = YES;
     
     // Basic Information - Section
-    section = [XLFormSectionDescriptor formSectionWithTitle:@"TextField Types"];
-    section.footerTitle = @"This is a long text that will appear on section footer";
+    section = [XLFormSectionDescriptor formSectionWithTitle:@"Login Or Signup"];
+    //section.footerTitle = @"This is a long text that will appear on section footer";
     [formDescriptor addFormSection:section];
     
     // Email
@@ -72,18 +71,27 @@ NSString *const kNotes = @"notes";
     
     row = [XLFormRowDescriptor formRowDescriptorWithTag:kIsMerchant rowType:XLFormRowDescriptorTypeBooleanCheck title:@"isMerchant"];
     row.required = YES;
+    row.value = @0;
     [section addFormRow:row];
+    
+    
     
     row = [XLFormRowDescriptor formRowDescriptorWithTag:@"login" rowType:XLFormRowDescriptorTypeButton title:@"login"];
     row.action.formBlock = ^(XLFormRowDescriptor * sender) {
         AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
         
         NSMutableDictionary *loginParams = [[self httpParameters] mutableCopy];
+        
         [loginParams removeObjectForKey:kIsMerchant];
         [loginParams removeObjectForKey:@"signup"];
         [loginParams removeObjectForKey:@"login"];
-        [manager POST:@"http://example.com/users.json" parameters:[self httpParameters] success:^(AFHTTPRequestOperation *operation, id responseObject) {
+
+        [loginParams nestAllKeysWithString:@"user"];
+        
+        [manager POST:@"https://afternoon-inlet-3482.herokuapp.com/users/" parameters:loginParams success:^(AFHTTPRequestOperation *operation, id responseObject) {
             NSLog(@"JSON: %@", responseObject);
+            [AppCache sharedCache].userDict = [responseObject mutableCopy];
+            [self presentControllerWithIsMerchant:[[responseObject objectForKey:kIsMerchant] boolValue]];
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"Error: %@", error);
         }];
@@ -95,8 +103,19 @@ NSString *const kNotes = @"notes";
     row.action.formBlock = ^(XLFormRowDescriptor * sender) {
         
         AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-        [manager POST:@"http://example.com/users.json" parameters:[self httpParameters] success:^(AFHTTPRequestOperation *operation, id responseObject) {
+
+        NSMutableDictionary *signupParams = [[self httpParameters] mutableCopy];
+        //[loginParams removeObjectForKey:kIsMerchant];
+        [signupParams removeObjectForKey:@"signup"];
+        [signupParams removeObjectForKey:@"login"];
+        [signupParams setValue:@YES forKey:@"isSignup"];
+        [signupParams nestAllKeysWithString:@"user"];
+
+
+        [manager POST:@"http://afternoon-inlet-3482.herokuapp.com/users.json" parameters:signupParams success:^(AFHTTPRequestOperation *operation, id responseObject) {
             NSLog(@"JSON: %@", responseObject);
+            [AppCache sharedCache].userDict = [responseObject mutableCopy];
+            [self presentControllerWithIsMerchant:[[responseObject objectForKey:kIsMerchant] boolValue]];
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"Error: %@", error);
         }];
@@ -105,6 +124,15 @@ NSString *const kNotes = @"notes";
     
     return [super initWithForm:formDescriptor];
     
+}
+
+-(void)presentControllerWithIsMerchant:(BOOL)isMerchant
+{
+    if(isMerchant) {
+        [self presentViewController:self.merchantController animated:YES completion:nil];
+    } else {
+        [self presentViewController:self.userController animated:YES completion:nil];
+    }
 }
 
 -(void)viewDidLoad

@@ -15,9 +15,10 @@
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, strong) NSString *type;
 @property (nonatomic, strong) NSNumber *rating;
+@property (nonatomic, strong) NSNumber *foodtruckId;
 
 
-- (id)initWithTitle:(NSString *)newTitle Location:(CLLocationCoordinate2D)location;
+- (id)initWithTitle:(NSString *)newTitle Location:(CLLocationCoordinate2D)location ID:(NSNumber *)truckID;
 - (MKAnnotationView *)annotationView;
 
 @end

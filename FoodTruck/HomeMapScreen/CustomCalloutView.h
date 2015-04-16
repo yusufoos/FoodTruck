@@ -19,4 +19,6 @@
 
 @property (weak, nonatomic) IBOutlet RatingBarView *ratingBar;
 
+@property (nonatomic, strong) NSNumber *foodtruckId;
+
 @end

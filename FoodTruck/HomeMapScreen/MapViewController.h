@@ -15,5 +15,7 @@
 
 - (void)showOrdersController;
 
+@property (nonatomic, assign) BOOL loggedIn;
+
 @end
 

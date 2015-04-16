@@ -23,7 +23,7 @@
         _menu = [[NSMutableArray alloc] init];
         for (NSDictionary *item in menu) {
             NSMutableDictionary *itemDict = [[NSMutableDictionary alloc] initWithDictionary:item];
-            [itemDict setValue:[NSNumber numberWithInt:0] forKey:@"Quantity"];
+            [itemDict setValue:[NSNumber numberWithInt:0] forKey:@"quantity"];
             [_menu addObject:itemDict];
         }
     }
@@ -46,7 +46,7 @@
 - (NSArray *)orderedItems {
     NSMutableArray *orderedItems = [[NSMutableArray alloc] init];
     for (NSMutableDictionary *orderedItem in self.menu) {
-        if([[orderedItem objectForKey:@"Quantity"] integerValue] > 0) {
+        if([[orderedItem objectForKey:@"quantity"] integerValue] > 0) {
             [orderedItems addObject:orderedItem];
         }
     }
@@ -86,10 +86,10 @@
     cell.item = self.menu[indexPath.row];
     
     // Configure the cell...
-    cell.itemTitleLabel.text = [self.menu[indexPath.row] objectForKey:@"Name"];
-    cell.descriptionLabel.text = [self.menu[indexPath.row] objectForKey:@"Description"];
-    cell.priceLabel.text = [NSString stringWithFormat:@"%@", [self.menu[indexPath.row] objectForKey:@"Price"]];
-    cell.quantityLabel.text = [NSString stringWithFormat:@"x%@", [self.menu[indexPath.row] valueForKey:@"Quantity"]];
+    cell.itemTitleLabel.text = [self.menu[indexPath.row] objectForKey:@"name"];
+    cell.descriptionLabel.text = [self.menu[indexPath.row] objectForKey:@"description"];
+    cell.priceLabel.text = [NSString stringWithFormat:@"%@", [self.menu[indexPath.row] objectForKey:@"price"]];
+    cell.quantityLabel.text = [NSString stringWithFormat:@"x%@", [self.menu[indexPath.row] valueForKey:@"quantity"]];
     
     return cell;
 }
