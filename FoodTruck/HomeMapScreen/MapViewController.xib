@@ -18,9 +18,9 @@
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5yh-3X-G6y">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 </mapView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdV-FW-E8Q">
-                    <rect key="frame" x="8" y="8" width="53" height="30"/>
-                    <state key="normal" title="Nearest">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdV-FW-E8Q">
+                    <rect key="frame" x="8" y="24" width="40" height="40"/>
+                    <state key="normal" image="pinicon.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -38,4 +38,7 @@
             <point key="canvasLocation" x="364" y="96"/>
         </view>
     </objects>
+    <resources>
+        <image name="pinicon.png" width="300" height="300"/>
+    </resources>
 </document>

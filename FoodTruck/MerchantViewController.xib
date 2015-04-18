@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MerchantViewController">
             <connections>
                 <outlet property="CreateUpdateFoodTruckBtn" destination="n3E-4X-FCO" id="pki-nn-YEy"/>
                 <outlet property="deleteFoodTruckBtn" destination="GkW-5N-sxp" id="x1T-jH-hm2"/>
+                <outlet property="tableView" destination="Fyy-QP-nVj" id="V6d-R1-eXC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,7 +18,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GkW-5N-sxp">
-                    <rect key="frame" x="239" y="285" width="121" height="30"/>
+                    <rect key="frame" x="239" y="71" width="121" height="30"/>
                     <state key="normal" title="Delete FoodTruck">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -25,8 +26,8 @@
                         <action selector="didPressDelete:" destination="-1" eventType="touchUpInside" id="27x-P3-xzD"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3E-4X-FCO">
-                    <rect key="frame" x="160" y="147" width="281" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3E-4X-FCO">
+                    <rect key="frame" x="211" y="25" width="178" height="30"/>
                     <state key="normal" title="Create/Update FoodTruck">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -34,15 +35,21 @@
                         <action selector="didPressCreate:" destination="-1" eventType="touchUpInside" id="jan-Cr-g4H"/>
                     </connections>
                 </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Fyy-QP-nVj">
+                    <rect key="frame" x="0.0" y="111" width="600" height="489"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="centerY" secondItem="GkW-5N-sxp" secondAttribute="centerY" id="7SG-3m-dsw"/>
-                <constraint firstItem="GkW-5N-sxp" firstAttribute="top" secondItem="n3E-4X-FCO" secondAttribute="bottom" constant="108" id="8hI-Xm-LBB"/>
-                <constraint firstAttribute="trailing" secondItem="n3E-4X-FCO" secondAttribute="trailing" constant="159" id="O70-9q-yvE"/>
-                <constraint firstItem="n3E-4X-FCO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="160" id="iS7-xH-YWC"/>
-                <constraint firstAttribute="centerX" secondItem="GkW-5N-sxp" secondAttribute="centerX" id="tff-ed-17s"/>
-                <constraint firstItem="n3E-4X-FCO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="147" id="veO-NH-Nir"/>
+                <constraint firstAttribute="bottom" secondItem="Fyy-QP-nVj" secondAttribute="bottom" id="42n-ap-FPF"/>
+                <constraint firstAttribute="centerX" secondItem="GkW-5N-sxp" secondAttribute="centerX" id="5cZ-B5-8Kp"/>
+                <constraint firstItem="n3E-4X-FCO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="BLU-NQ-7KN"/>
+                <constraint firstAttribute="centerX" secondItem="n3E-4X-FCO" secondAttribute="centerX" id="Oxa-1v-XvX"/>
+                <constraint firstItem="Fyy-QP-nVj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UAV-we-Gbn"/>
+                <constraint firstAttribute="trailing" secondItem="Fyy-QP-nVj" secondAttribute="trailing" id="Xo0-yF-K0p"/>
+                <constraint firstItem="GkW-5N-sxp" firstAttribute="top" secondItem="n3E-4X-FCO" secondAttribute="bottom" constant="16" id="Yzn-o2-gsA"/>
+                <constraint firstItem="Fyy-QP-nVj" firstAttribute="top" secondItem="GkW-5N-sxp" secondAttribute="bottom" constant="10" id="aUF-5T-1Ou"/>
             </constraints>
             <point key="canvasLocation" x="172" y="154"/>
         </view>

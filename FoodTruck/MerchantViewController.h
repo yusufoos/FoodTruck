@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MerchantViewController : UIViewController
+@interface MerchantViewController : UIViewController <UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate>
 
 @end

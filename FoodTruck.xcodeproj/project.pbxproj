@@ -37,6 +37,9 @@
 		20F0EF101A166D100069E493 /* OrderItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20F0EF0F1A166D100069E493 /* OrderItemTableViewCell.xib */; };
 		20F0EF131A166D620069E493 /* OrderItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F0EF121A166D620069E493 /* OrderItemTableViewCell.m */; };
 		20F0EF161A1670350069E493 /* OrderPersistanceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F0EF151A1670350069E493 /* OrderPersistanceManager.m */; };
+		20F26C7D1AE2A83000EC0B22 /* pinicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 20F26C7C1AE2A83000EC0B22 /* pinicon.png */; };
+		20F26C7F1AE2A97100EC0B22 /* order.png in Resources */ = {isa = PBXBuildFile; fileRef = 20F26C7E1AE2A97100EC0B22 /* order.png */; };
+		20F26C811AE2A97700EC0B22 /* map-8.png in Resources */ = {isa = PBXBuildFile; fileRef = 20F26C801AE2A97700EC0B22 /* map-8.png */; };
 		605A14FCDC3C7686D79DCD48 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA872E5D43E9715BAEB92ED3 /* libPods.a */; };
 		7B49CC2E1A0AD93D00DBD9C3 /* ItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B49CC2D1A0AD93D00DBD9C3 /* ItemTableViewCell.m */; };
 		7B49CC301A0AE13900DBD9C3 /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B49CC2F1A0AE13900DBD9C3 /* ItemTableViewCell.xib */; };
@@ -112,6 +115,9 @@
 		20F0EF121A166D620069E493 /* OrderItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderItemTableViewCell.m; sourceTree = "<group>"; };
 		20F0EF141A1670350069E493 /* OrderPersistanceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderPersistanceManager.h; sourceTree = "<group>"; };
 		20F0EF151A1670350069E493 /* OrderPersistanceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderPersistanceManager.m; sourceTree = "<group>"; };
+		20F26C7C1AE2A83000EC0B22 /* pinicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinicon.png; sourceTree = "<group>"; };
+		20F26C7E1AE2A97100EC0B22 /* order.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = order.png; sourceTree = "<group>"; };
+		20F26C801AE2A97700EC0B22 /* map-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-8.png"; sourceTree = "<group>"; };
 		57EBD40A7791AB600AB539BE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7B49CC2C1A0AD93D00DBD9C3 /* ItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemTableViewCell.h; sourceTree = "<group>"; };
 		7B49CC2D1A0AD93D00DBD9C3 /* ItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemTableViewCell.m; sourceTree = "<group>"; };
@@ -155,7 +161,10 @@
 		200A79851A066C9600F9A5FC /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				20F26C7C1AE2A83000EC0B22 /* pinicon.png */,
 				200A799D1A09323E00F9A5FC /* starEmpty.png */,
+				20F26C801AE2A97700EC0B22 /* map-8.png */,
+				20F26C7E1AE2A97100EC0B22 /* order.png */,
 				200A799E1A09323E00F9A5FC /* starFull.png */,
 				200A79861A066CA800F9A5FC /* truckPin.png */,
 			);
@@ -417,6 +426,7 @@
 				200A79A51A09343D00F9A5FC /* RatingBarView.xib in Resources */,
 				9AC1A1FE1A0C3B970098775C /* CreditCardPayment.xib in Resources */,
 				9AC1A2001A0C3B970098775C /* CCDatePickerView.xib in Resources */,
+				20F26C7F1AE2A97100EC0B22 /* order.png in Resources */,
 				9AC1A1FB1A0C3B970098775C /* CheckoutStoryboard.storyboard in Resources */,
 				200A79961A07FFAA00F9A5FC /* CustomCalloutView.xib in Resources */,
 				200A79901A06997000F9A5FC /* FoodTruckData.plist in Resources */,
@@ -424,6 +434,8 @@
 				9AC1A1FF1A0C3B970098775C /* CheckoutViewController.xib in Resources */,
 				200A79A01A09323E00F9A5FC /* starFull.png in Resources */,
 				200A799F1A09323E00F9A5FC /* starEmpty.png in Resources */,
+				20F26C811AE2A97700EC0B22 /* map-8.png in Resources */,
+				20F26C7D1AE2A83000EC0B22 /* pinicon.png in Resources */,
 				20F0EF101A166D100069E493 /* OrderItemTableViewCell.xib in Resources */,
 				9AC1A1FD1A0C3B970098775C /* CheckoutItemCellView.xib in Resources */,
 				2049ED161A02790900C904E3 /* Images.xcassets in Resources */,
